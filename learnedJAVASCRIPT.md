@@ -31,7 +31,9 @@
     * Explore Differences Between the var and let Keywords
         * One of the biggest problems with declaring variables with the var keyword is that you can easily overwrite variable declarations.
         * A keyword called let was introduced in ES6, a major update to JavaScript, to solve this potential issue with the var keyword.
-        
+    * Declare a Read-Only Variable with the const Keyword
+        * In ES6, you can also declare variables using the const keyword.
+        * const has all the awesome features that let has, with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned:
 
 
 
