@@ -23,6 +23,16 @@
         * When JavaScript variables are declared, they have an initial value of undefined. 
             * If you do a mathematical operation on an undefined variable your result will be NaN which means "Not a Number". 
             * If you concatenate a string with an undefined variable, you will get a string of undefined.
+    * Understanding Case Sensitivity in Variables
+        * In JavaScript all variables and function names are case sensitive. This means that capitalization matters.
+        * Best Practice
+            * Write variable names in JavaScript in camelCase. In camelCase, multi-word variable names have the first word in lowercase and the first letter of each subsequent word is capitalized.
+    
+    * Explore Differences Between the var and let Keywords
+        * One of the biggest problems with declaring variables with the var keyword is that you can easily overwrite variable declarations.
+        * A keyword called let was introduced in ES6, a major update to JavaScript, to solve this potential issue with the var keyword.
         
+
+
 
 ![End Banner](/Documentation/botton-1200x350.gif)
