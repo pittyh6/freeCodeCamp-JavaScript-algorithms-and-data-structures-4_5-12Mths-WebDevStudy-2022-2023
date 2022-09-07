@@ -55,7 +55,23 @@
     * Create Decimal Numbers with JavaScript
         *  Decimal numbers are sometimes referred to as floating point numbers or floats.
         *  myDecimal = 7.5;
-    
-
+    * Multiply Two Decimals with JavaScript
+        * const product = 2.0 * 2.5;
+    * Divide One Decimal by Another with JavaScript
+        * const quotient = 4.4 / 2.0; 
+    * Finding a Remainder in JavaScript
+        * The remainder operator % gives the remainder of the division of two numbers.
+        * 5 % 2 = 1 because
+            Math.floor(5 / 2) = 2 (Quotient)
+            2 * 2 = 4
+            5 - 4 = 1 (Remainder)
+        * const remainder = 11%3;
+    * Compound Assignment With Augmented Addition
+        * In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:
+            * myVar = myVar + 5;
+        * One such operator is the += operator.
+            * myVar += 5;
+    * Compound Assignment With Augmented Subtraction
+        
 
 ![End Banner](/Documentation/botton-1200x350.gif)
