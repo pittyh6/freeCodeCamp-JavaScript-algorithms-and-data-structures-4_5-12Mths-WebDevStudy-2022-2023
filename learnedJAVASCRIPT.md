@@ -35,6 +35,27 @@
         * In ES6, you can also declare variables using the const keyword.
         * const has all the awesome features that let has, with the added bonus that variables declared using const are read-only. They are a constant value, which means that once a variable is assigned with const, it cannot be reassigned:
 
+    * add One Number to Another with JavaScript
+        * var n = 5 + 10;
+    * Subtract One Number from Another with JavaScript
+        * const myVar = 12 - 6;
+    * Multiply Two Numbers with JavaScript
+        * const myVar = 13 * 13;
+    * Divide One Number by Another with JavaScript
+        * const myVar = 16 / 2;
+
+    * Increment a Number with JavaScript
+        * i++;
+        * i = i + 1;
+        * ++i;
+    * Decrement a Number with JavaScript
+        * i--;
+        * i = i - 1;
+
+    * Create Decimal Numbers with JavaScript
+        *  Decimal numbers are sometimes referred to as floating point numbers or floats.
+        *  myDecimal = 7.5;
+    
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
