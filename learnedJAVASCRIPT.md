@@ -137,6 +137,37 @@
             - The only way to change myStr would be to assign it with a new string
             let myStr = "Bob";
             myStr = "Job";
+    * Use Bracket Notation to Find the Nth Character in a String
+        * secondLetterName = myName[1]
+    * Use Bracket Notation to Find the Last Character in a String
+        * In order to get the last letter of a string, you can subtract one from the string's length.
+            * const lastLetter = firstName[firstName.length - 1];
+    * Use Bracket Notation to Find the Nth-to-Last Character in a String
+        * const firstName = "Augusta" 
+         firstName[firstName.length - 3]
+    * Word Blanks - challenge
+    
+    # Array
+    * Store Multiple Values in one Variable using JavaScript Arrays
+        * With JavaScript array variables, we can store several pieces of data in one place.
+        * You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:
+            * const sandwich = ["peanut butter", "jelly", "bread"];
+    * Nest one Array within Another Array
+        * You can also nest arrays within other arrays, like below:
+            * const teams = [["Bulls", 23], ["White Sox", 45]];
+    * Access Array Data with Indexes
+        * Array indexes are written in the same bracket notation that strings use, except that instead of specifying a character, they are specifying an entry in the array. Like strings, arrays use zero-based indexing, so the first element in an array has an index of 0  
+            * const array = [50, 60, 70];
+                console.log(array[0]);
+                const data = array[1];
+    * Modify Array Data With Indexes
+        * Unlike strings, the entries of arrays are mutable and can be changed freely, even if the array was declared with const.
+            * const ourArray = [50, 40, 30];
+                ourArray[0] = 15;  -> [15, 40, 30]
+    * Access Multi-Dimensional Arrays With Indexes
+        
+
+
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
