@@ -89,9 +89,23 @@
             * String values in JavaScript may be written with single or double quotes, as long as you start and end with the same type of quote. Unlike some other programming languages, single and double quotes work the same in JavaScript.
                 * const conversation = 'Finn exclaims to Jake, "Algebraic!"';
                 * const goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"'; 
+    * Escape Sequences in Strings
+        * Quotes are not the only characters that can be escaped inside a string. There are two reasons to use escaping characters:
+            * To allow you to use characters you may not otherwise be able to type out, such as a carriage return.       
+            * To allow you to represent multiple quotes in a string without JavaScript misinterpreting what you mean.
+                Code	Output
+                \'	single quote
+                \"	double quote
+                \\	backslash
+                \n	newline
+                \r	carriage return
+                \t	tab
+                \b	word boundary
+                \f	form feed
+            * const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
 
-
-
+    * Concatenating Strings with Plus Operator
+    
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
