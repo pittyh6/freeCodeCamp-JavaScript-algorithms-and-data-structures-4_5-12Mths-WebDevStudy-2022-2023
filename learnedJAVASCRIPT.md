@@ -105,7 +105,18 @@
             * const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
 
     * Concatenating Strings with Plus Operator
-    
+        * In JavaScript, when the + operator is used with a String value, it is called the concatenation operator. You can build a new string out of other strings by concatenating them together.
+            * 'My name is Alan,' + ' I concatenate.'
+    * Concatenating Strings with the Plus Equals Operator
+        * We can also use the += operator to concatenate a string onto the end of an existing string variable. This can be very helpful to break a long string over several lines.
+            * let ourStr = "I come first. ";
+                ourStr += "I come second.";
+    * Constructing Strings with Variables
+        * Sometimes you will need to build a string. By using the concatenation operator (+), you can insert one or more variables into a string you're building.
+            * const ourName = "freeCodeCamp";
+                const ourStr = "Hello, our name is " + ourName + ", how are you?";
+                
+
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
