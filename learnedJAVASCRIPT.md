@@ -72,6 +72,14 @@
         * One such operator is the += operator.
             * myVar += 5;
     * Compound Assignment With Augmented Subtraction
-        
+        * Like the += operator, -= subtracts a number from a variable
+            * myVar -= 5;
+    * Compound Assignment With Augmented Multiplication
+        * The *= operator multiplies a variable by a number.
+            * myVar *= 5; => myVar = myVar * 5;
+    * Compound Assignment With Augmented Division
+        * The /= operator divides a variable by another number.
+            * myVar /= 5; => myVar = myVar / 5;
+    
 
 ![End Banner](/Documentation/botton-1200x350.gif)
