@@ -115,8 +115,28 @@
         * Sometimes you will need to build a string. By using the concatenation operator (+), you can insert one or more variables into a string you're building.
             * const ourName = "freeCodeCamp";
                 const ourStr = "Hello, our name is " + ourName + ", how are you?";
-                
 
+    * Appending Variables to Strings
+        * Just as we can build a string over multiple lines out of string literals, we can also append variables to a string using the plus equals (+=) operator.
+            * const anAdjective = "awesome!";
+                let ourStr = "freeCodeCamp is ";
+                ourStr += anAdjective;
+    * Find the Length of a String
+        * You can find the length of a String value by writing .length after the string variable or string literal.
+            * console.log("Alan Peter".length);
+    * Use Bracket Notation to Find the First Character in a String
+        * Bracket notation is a way to get a character at a specific index within a string.
+        * Most modern programming languages, like JavaScript, don't start counting at 1 like humans do. They start at 0. This is referred to as Zero-based indexing
+            * const firstName = "Charles";
+                const firstLetter = firstName[0];
+    * Understand String Immutability
+        * In JavaScript, String values are immutable, which means that they cannot be altered once created.
+            * let myStr = "Bob";
+            myStr[0] = "J";
+            - cannot change the value of myStr to Job, because the contents of myStr cannot be altered.
+            - The only way to change myStr would be to assign it with a new string
+            let myStr = "Bob";
+            myStr = "Job";
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
