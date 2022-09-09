@@ -175,9 +175,24 @@
             const subarray = arr[3];
             const nestedSubarray = arr[3][0];
             const element = arr[3][0][1];
-    
-
-
+    # pop() and push() and shift()
+    * Manipulate Arrays With push()
+        * An easy way to append data to the end of an array is via the push() function.
+        * .push() takes one or more parameters and "pushes" them onto the end of the array.
+           const arr1 = [1, 2, 3];
+            arr1.push(4);
+            const arr2 = ["Stimpson", "J", "cat"];
+            arr2.push(["happy", "joy"]); 
+    * Manipulate Arrays With pop()
+        * .pop() is used to pop a value off of the end of an array. We can store this popped off value by assigning it to a variable. In other words, .pop() removes the last element from an array and returns that element.
+            * myArray = [1,2,3];
+                car = myArray.pop(); -> that means car = 3
+    * Manipulate Arrays With shift()
+        * That's where .shift() comes in. It works just like .pop(), except it removes the first element instead of the last.
+            * const ourArray = ["Stimpson", "J", ["cat"]];
+                const removedFromOurArray = ourArray.shift();
+    * Manipulate Arrays With unshift()
+        * 
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
