@@ -81,5 +81,17 @@
         * The /= operator divides a variable by another number.
             * myVar /= 5; => myVar = myVar / 5;
     
+    * Escaping Literal Quotes in Strings
+        * When you are defining a string you must start and end with a single or double quote. What happens when you need a literal quote: " or ' inside of your string?
+            * In JavaScript, you can escape a quote from considering it as an end of string quote by placing a backslash (\) in front of the quote.
+                * const sampleStr = "Alan said, \"Peter is learning JavaScript\".";
+        * Quoting Strings with Single Quotes
+            * String values in JavaScript may be written with single or double quotes, as long as you start and end with the same type of quote. Unlike some other programming languages, single and double quotes work the same in JavaScript.
+                * const conversation = 'Finn exclaims to Jake, "Algebraic!"';
+                * const goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"'; 
+
+
+
+
 
 ![End Banner](/Documentation/botton-1200x350.gif)
