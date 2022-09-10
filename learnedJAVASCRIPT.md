@@ -196,6 +196,16 @@
             * const ourArray = ["Stimpson", "J", "cat"];
                 ourArray.shift();
                 ourArray.unshift("Happy");
-    
+
+    # Functions
+    * Write Reusable JavaScript with Functions
+        * In JavaScript, we can divide up our code into reusable parts called functions.
+            * function functionName() {console.log("Hello World"); }
+            * You can call or invoke this function by using its name followed by parentheses, like this: functionName();
+                * function functionName() { console.log("Hello World"); }
+    * Passing Values to Functions with Arguments
+        * Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
+            * function testFun(param1, param2) {console.log(param1, param2); }
+
 
 ![End Banner](/Documentation/botton-1200x350.gif)
