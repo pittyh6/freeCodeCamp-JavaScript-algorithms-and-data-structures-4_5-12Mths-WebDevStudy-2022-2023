@@ -206,6 +206,21 @@
     * Passing Values to Functions with Arguments
         * Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
             * function testFun(param1, param2) {console.log(param1, param2); }
+    * Return a Value from a Function with Return
+        * We can pass values into a function with arguments. You can use a return statement to send a value back out of a function.
+            * function plusThree(num) {  return num + 3;}
+                const answer = plusThree(5);
+
+    * Global Scope and Functions
+        * In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
+        * Variables which are declared without the let or const keywords are automatically created in the global scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with let or const.
+    * Local Scope and Functions
+        * Variables which are declared within a function, as well as the function parameters, have local scope. That means they are only visible within that function.
+            * function myTest() {
+              const loc = "foo";
+              console.log(loc);
+            }
+            
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
