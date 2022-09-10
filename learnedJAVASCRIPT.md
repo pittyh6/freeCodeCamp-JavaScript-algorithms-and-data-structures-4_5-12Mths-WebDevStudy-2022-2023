@@ -268,7 +268,38 @@
             * 3 !==  3  // false
             * 3 !== '3' // true
             * 4 !==  3  // true
-    
+    * Comparison with the Greater Than Operator
+        * The greater than operator (>) compares the values of two numbers. If the number to the left is greater than the number to the right, it returns true. Otherwise, it returns false
+        * Like the equality operator, the greater than operator will convert data types of values while comparing.
+            * 5   >  3  // true
+            * 7   > '3' // true
+            * 2   >  3  // false
+            * '1' >  9  // false
+    * Comparison with the Greater Than Or Equal To Operator
+        * The greater than or equal to operator (>=) compares the values of two numbers. If the number to the left is greater than or equal to the number to the right, it returns true. Otherwise, it returns false.
+        * Like the equality operator, the greater than or equal to operator will convert data types while comparing.
+            * 6   >=  6  // true
+            * 7   >= '3' // true
+            * 2   >=  3  // false
+            * '7' >=  9  // false
+    * Comparison with the Less Than Operator
+        * The less than operator (<) compares the values of two numbers. If the number to the left is less than the number to the right, it returns true. Otherwise, it returns false. Like the equality operator, the less than operator converts data types while comparing.
+            * 2   < 5 // true
+            * '3' < 7 // true
+            * 5   < 5 // false
+            * 3   < 2 // false
+            * '8' < 4 // false
+    * Comparison with the Less Than Or Equal To Operator
+        * The less than or equal to operator (<=) compares the values of two numbers. If the number to the left is less than or equal to the number to the right, it returns true. If the number on the left is greater than the number on the right, it returns false. Like the equality operator, the less than or equal to operator converts data types.
+            * 4   <= 5 // true
+            * '7' <= 7 // true
+            * 5   <= 5 // true
+            * 3   <= 2 // false
+            * '8' <= 4 // false
+    * Comparisons with the Logical And Operator
 
-    
+
+
+
+
 ![End Banner](/Documentation/botton-1200x350.gif)
