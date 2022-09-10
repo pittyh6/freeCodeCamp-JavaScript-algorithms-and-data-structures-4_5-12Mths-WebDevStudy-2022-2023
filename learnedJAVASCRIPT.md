@@ -237,7 +237,10 @@
         * Assume we have pre-defined a function sum which adds two numbers together, then:
             ourSum = sum(5, 12);   
             * will call the sum function, which returns a value of 17 and assigns it to the ourSum variable.
-    
+    * Stand in Line
+        * In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
+            * 
+
 
 
 
