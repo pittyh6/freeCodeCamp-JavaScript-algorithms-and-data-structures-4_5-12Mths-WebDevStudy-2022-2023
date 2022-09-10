@@ -244,7 +244,7 @@
         * Another data type is the Boolean. Booleans may only be one of two values: true or false. They are basically little on-off switches, where true is on and false is off. These two states are mutually exclusive.
         * Note: Boolean values are never written with quotes. The strings "true" and "false" are not Boolean and have no special meaning in JavaScript.
     
-    # if and else
+    # IF statement
     * Use Conditional Logic with If Statements
         * if statements are used to make decisions in code. The keyword if tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. These conditions are known as Boolean conditions and they may only be true or false.
         * When the condition evaluates to true, the program executes the statement inside the curly braces. When the Boolean condition evaluates to false, the statement inside the curly braces will not execute.
@@ -297,9 +297,24 @@
             * 3   <= 2 // false
             * '8' <= 4 // false
     * Comparisons with the Logical And Operator
-
-
-
+        * Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+            * if (num > 5 && num < 10) { return "Yes"; }
+    * Comparisons with the Logical Or Operator
+        * The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+            * if (num > 10 || num < 5) { return "No"; }
+    # ELSE statement
+    * Introducing Else Statements
+        * When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an else statement, an alternate block of code can be executed.
+            * if (num > 10) { return "Bigger than 10"; } 
+                else { return "10 or Less"; }
+    * Introducing Else If Statements
+        * If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
+            *   if (num > 15) { return "Bigger than 15"; } 
+                else if (num < 5) { return "Smaller than 5"; }
+                else { return "Between 5 and 15"; }
+    * Logical Order in If Else Statements
+    * Chaining If Else Statements
+        * 
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
