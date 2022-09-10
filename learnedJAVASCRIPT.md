@@ -220,7 +220,25 @@
               const loc = "foo";
               console.log(loc);
             }
-            
+    * Global vs. Local Scope in Functions
+        * It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
+            * const someVar = "Hat";
+                function myFun() {
+                  const someVar = "Head";
+                  return someVar;
+                }
+    * Understanding Undefined Value returned from a Function
+        * A function can include the return statement but it does not have to. In the case that the function doesn't have a return statement, when you call it, the function processes the inner code but the returned value is undefined.
+            * let sum = 0;
+               function addSum(num) {  sum = sum + num;}
+               addSum(3);
+    * Assignment with a Returned Value
+        * If you'll recall from our discussion about Storing Values with the Assignment Operator, everything to the right of the equal sign is resolved before the value is assigned. This means we can take the return value of a function and assign it to a variabl
+        * Assume we have pre-defined a function sum which adds two numbers together, then:
+            ourSum = sum(5, 12);   
+            * will call the sum function, which returns a value of 17 and assigns it to the ourSum variable.
+    
+
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
