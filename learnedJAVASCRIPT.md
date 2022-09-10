@@ -239,9 +239,36 @@
             * will call the sum function, which returns a value of 17 and assigns it to the ourSum variable.
     * Stand in Line
         * In Computer Science a queue is an abstract Data Structure where items are kept in order. New items can be added at the back of the queue and old items are taken off from the front of the queue.
-            * 
+    
+    * Understanding Boolean Values
+        * Another data type is the Boolean. Booleans may only be one of two values: true or false. They are basically little on-off switches, where true is on and false is off. These two states are mutually exclusive.
+        * Note: Boolean values are never written with quotes. The strings "true" and "false" are not Boolean and have no special meaning in JavaScript.
+    
+    # if and else
+    * Use Conditional Logic with If Statements
+        * if statements are used to make decisions in code. The keyword if tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. These conditions are known as Boolean conditions and they may only be true or false.
+        * When the condition evaluates to true, the program executes the statement inside the curly braces. When the Boolean condition evaluates to false, the statement inside the curly braces will not execute.
+            * if (condition is true) { statement is executed }
+    * Comparison with the Equality Operator
+        * ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. Note that equality is different from assignment (=), which assigns the value on the right of the operator to a variable on the left.
+            * if (myVal == 10) { return "Equal"; }
+    * Comparison with the Strict Equality Operator
+        * If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
+            * 3 ===  3  // true
+            * 3 === '3' // false
+    * Comparison with the Inequality Operator
+        * The inequality operator (!=) is the opposite of the equality operator. It means not equal and returns false where equality would return true and vice versa. Like the equality operator, the inequality operator will convert data types of values while comparing.
+            * 1 !=  2    // true
+            * 1 != "1"   // false
+            * 1 != '1'   // false
+            * 1 != true  // false
+            * 0 != false // false
+    * Comparison with the Strict Inequality Operator
+        * The strict inequality operator (!==) is the logical opposite of the strict equality operator. It means "Strictly Not Equal" and returns false where strict equality would return true and vice versa. The strict inequality operator will not convert data types.
+            * 3 !==  3  // false
+            * 3 !== '3' // true
+            * 4 !==  3  // true
+    
 
-
-
-
+    
 ![End Banner](/Documentation/botton-1200x350.gif)
