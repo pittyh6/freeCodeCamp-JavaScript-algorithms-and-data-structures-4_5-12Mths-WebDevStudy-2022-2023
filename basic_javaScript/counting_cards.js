@@ -24,6 +24,24 @@ function cc(card) {
     let bet = " Bet";
     let hold = ' Hold';
 
+    console.log("card: " + card);
+    
+    if(card == 2 || card == 3 || card == 4 || card == 5 || card == 6) {
+        count += 1;
+    }else if(card == 10 || card == 'J' || card == 'Q' || card == 'K'|| card == 'A'){
+        count -= 1;
+    }
+
+    if(count > 0){
+        return count + bet;
+    }else{
+        return count + hold;
+    }
+
+
+
+
+    /*
     if(card == 2 || card == 3 || card == 4 || card == 5 || card == 6) {
         count += 1;
         console.log("count += 1: " + count);
@@ -35,15 +53,16 @@ function cc(card) {
             return count + hold;
         }
     }else if(card == 7 || card == 8 || card == 9){
-        count += 0;
+        // count += 0;
         console.log("count += 0: " + count);
-        if(count >= 0){
-            console.log(count + bet)
-            return count + bet;
-        }else{
-            console.log(count + hold)
-            return count + hold;
-        }
+        // if(count >= 0){
+        //     console.log(count + bet)
+        //     return count + bet;
+        // }else{
+        //     console.log(count + hold)
+        //     return count + hold;
+        // }
+        return ;
     }else if(card == 10 || card == 'J' || card == 'Q' || card == 'K'|| card == 'A'){
         console.log("count -= 1: " + count);
         count -= 1;
@@ -54,8 +73,9 @@ function cc(card) {
             console.log(count + hold)
             return count + hold;
         }
-    }
+    }*/
   // Only change code above this line
 }
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+//cc(2); cc(3); cc(7); cc('K'); cc('A');
+cc(2); cc(7); cc(8); cc(9);
