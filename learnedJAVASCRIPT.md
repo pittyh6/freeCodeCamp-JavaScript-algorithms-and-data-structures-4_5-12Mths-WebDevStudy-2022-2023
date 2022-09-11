@@ -450,8 +450,62 @@
         *   We can also delete properties from objects like this:
             * delete ourDog.bark;  
     * Using Objects for Lookups
-        * 
-    
+        * Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to lookup values rather than a switch statement or an if/else chain. This is most useful when you know that your input data is limited to a certain range.
+            * const alpha = {
+                  1:"Z",
+                  2:"Y",
+                  3:"X",
+                  4:"W",
+                  ...
+                  24:"C",
+                  25:"B",
+                  26:"A"
+              };
+              const thirdLetter = alpha[2];
+              const lastLetter = alpha[24];
+              const value = 2;
+              const valueLookup = alpha[value];
+    * Testing Objects for Properties
+        * Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
+            * const myObj = {
+                top: "hat",
+                bottom: "pants"
+              };
+              myObj.hasOwnProperty("top");
+              myObj.hasOwnProperty("middle");
+    * Manipulating Complex Objects
+        * Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+            * const ourMusic = [
+                {
+                  "artist": "Daft Punk",
+                  "title": "Homework",
+                  "release_year": 1997,
+                  "formats": [ 
+                    "CD", 
+                    "Cassette", 
+                    "LP"
+                  ],
+                  "gold": true
+                }
+              ];
+    * Accessing Nested Objects
+        * The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+            * const ourStorage = {
+                 "desk": {
+                   "drawer": "stapler"
+                 },
+                 "cabinet": {
+                   "top drawer": { 
+                     "folder1": "a file",
+                     "folder2": "secrets"
+                   },
+                   "bottom drawer": "soda"
+                 }
+               };
+               ourStorage.cabinet["top drawer"].folder2;
+               ourStorage.desk.drawer;
+                * ourStorage.cabinet["top drawer"].folder2 would be the string secrets, and ourStorage.desk.drawer would be the string stapler.
+    * 
 
 
 
