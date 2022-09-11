@@ -530,6 +530,46 @@
               * ourPets[0].names[1] would be the string Fluffy, 
               * and ourPets[1].names[0] would be the string Spot.
 
+    # LOOPS
+    * Iterate with JavaScript While Loops
+        * You can run the same code multiple times by using a loop.
+        * The first type of loop we will learn is called a while loop because it runs while a specified condition is true and stops once that condition is no longer true.
+            * const ourArray = [];
+              let i = 0;
+              while (i < 5) {
+                ourArray.push(i);
+                i++;
+              }
+    * Iterate with JavaScript For Loops
+        * You can run the same code multiple times by using a loop.
+        * The most common type of JavaScript loop is called a for loop because it runs for a specific number of times.
+        * For loops are declared with three optional expressions separated by semicolons:
+        * for (a; b; c), where a is the initialization statement, b is the condition statement, and c is the final expression
+            * const ourArray = [];
+              for (let i = 0; i < 5; i++) {
+                ourArray.push(i);
+              }
+    * Iterate Odd Numbers With a For Loop
+        * For loops don't have to iterate one at a time. By changing our final-expression, we can count by even numbers.
+        * We'll start at i = 0 and loop while i < 10. We'll increment i by 2 each loop with i += 2.
+            * for (let i = 0; i < 10; i += 2) {
+                ourArray.push(i); }
+    * Count Backwards With a For Loop
+        * A for loop can also count backwards, so long as we can define the right conditions.
+        * In order to decrement by two each iteration, we'll need to change our initialization, condition, and final expression.
+        * We'll start at i = 10 and loop while i > 0. We'll decrement i by 2 each loop with i -= 2
+            * for (let i = 10; i > 0; i -= 2) {
+                ourArray.push(i);
+              }
+    * Iterate Through an Array with a For Loop
+        * A common task in JavaScript is to iterate through the contents of an array. One way to do that is with a for loop. This code will output each element of the array arr to the console:
+            * const arr = [10, 9, 8, 7, 6];
+            for (let i = 0; i < arr.length; i++) {
+               console.log(arr[i]);
+            }
+    
 
+        
+        
 
 ![End Banner](/Documentation/botton-1200x350.gif)
