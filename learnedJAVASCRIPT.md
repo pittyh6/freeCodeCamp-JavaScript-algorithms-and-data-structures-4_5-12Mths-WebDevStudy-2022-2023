@@ -420,8 +420,37 @@
             myObj["Space Name"];
             myObj['More Space'];
             myObj["NoSpace"];
-    
-
+    * Accessing Object Properties with Variables
+        * Another use of bracket notation on objects is to access a property which is stored as the value of a variable. This can be very useful for iterating through an object's properties or when accessing a lookup table.
+        * const dogs = {
+            Fido: "Mutt",
+            Hunter: "Doberman",
+            Snoopie: "Beagle"
+          };
+          const myDog = "Hunter";
+          const myBreed = dogs[myDog];
+          console.log(myBreed);
+        * The string Doberman would be displayed in the console.
+        * Note that we do not use quotes around the variable name when using it to access the property because we are using the value of the variable, not the name.
+    * Updating Object Properties
+        * After you've created a JavaScript object, you can update its properties at any time just like you would update any other variable. You can use either dot or bracket notation to update.
+            * const ourDog = {
+              "name": "Camper",
+              "legs": 4,
+              "tails": 1,
+              "friends": ["everything!"]
+            };
+        * Here's how we update his object's name property: ourDog.name = "Happy Camper"; or ourDog["name"] = "Happy Camper"; Now when we evaluate ourDog.name, instead of getting Camper, we'll get his new name, Happy Camper.   
+            * ourDog.name = "Happy Camper"; or ourDog["name"] = "Happy Camper";
+    * Add New Properties to a JavaScript Object
+        * You can add new properties to existing JavaScript objects the same way you would modify them.
+            * ourDog.bark = "bow-wow"; OR 
+            ourDog["bark"] = "bow-wow";
+    * Delete Properties from a JavaScript Object
+        *   We can also delete properties from objects like this:
+            * delete ourDog.bark;  
+    * Using Objects for Lookups
+        * 
     
 
 
