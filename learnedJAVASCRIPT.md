@@ -383,6 +383,44 @@
     * Return Early Pattern for Functions
         * When a return statement is reached, the execution of the current function stops and control returns to the calling location.
     
+    # OBJECTS
+    * Build JavaScript Objects
+        * Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+        * Objects are useful for storing data in a structured way, and can represent real world objects
+            * const cat = {
+                  "name": "Whiskers",
+                  "legs": 4,
+                  "tails": 1,
+                  "enemies": ["Water", "Dogs"]
+              };
+        * In this example, all the properties are stored as strings, such as name, legs, and tails. However, you can also use numbers as properties. You can even omit the quotes for single-word string properties, as follows:
+            * const anotherObject = {
+                  make: "Ford",
+                  5: "five",
+                  "model": "focus"
+              };
+        * However, if your object has any non-string properties, JavaScript will automatically typecast them as strings.
+    * Accessing Object Properties with Dot Notation
+        * There are two ways to access the properties of an object: dot notation (.) and bracket notation ([]), similar to an array.
+        * Dot notation is what you use when you know the name of the property you're trying to access ahead of time.
+            * const myObj = {
+                  prop1: "val1",
+                  prop2: "val2"
+              };
+              const prop1val = myObj.prop1;
+              const prop2val = myObj.prop2;
+    * Accessing Object Properties with Bracket Notation
+        * The second way to access the properties of an object is bracket notation ([]). If the property of the object you are trying to access has a space in its name, you will need to use bracket notation.
+        * However, you can still use bracket notation on object properties without spaces.
+            * const myObj = {
+              "Space Name": "Kirk",
+              "More Space": "Spock",
+              "NoSpace": "USS Enterprise"
+            };
+            myObj["Space Name"];
+            myObj['More Space'];
+            myObj["NoSpace"];
+    
 
     
 
