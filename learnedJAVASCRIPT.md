@@ -578,8 +578,26 @@
                 }
               }
                 * This outputs each sub-element in arr one at a time. Note
+    * Iterate with JavaScript Do...While Loops
+        * It is called a do...while loop because it will first do one pass of the code inside the loop no matter what, and then continue to run the loop while the specified condition evaluates to true.
+            * const ourArray = [];
+              let i = 0;
+              do {
+                ourArray.push(i);
+                i++;
+              } while (i < 5);
+    * Replace Loops using Recursion
+        * Recursion is the concept that a function can be expressed in terms of itself. To help understand this, start by thinking about the following task: multiply the first n elements of an array to create the product of those elements.
+            * function multiply(arr, n) {
+                if (n <= 0) {
+                  return 1;
+                } else {
+                  return multiply(arr, n - 1) * arr[n - 1];
+                }
+              }
+              * Recursive functions must have a base case when they return without calling the function again (in this example, when n <= 0), otherwise they can never finish executing.
     * 
-        
+
         
 
 ![End Banner](/Documentation/botton-1200x350.gif)
