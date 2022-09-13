@@ -596,7 +596,25 @@
                 }
               }
               * Recursive functions must have a base case when they return without calling the function again (in this example, when n <= 0), otherwise they can never finish executing.
-    * 
+    
+    # RANDOM
+    * Generate Random Fractions with JavaScript
+        * Random numbers are useful for creating random behavior.
+        * JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). Thus Math.random() can return a 0 but never return a 1.
+    * Generate Random Whole Numbers with JavaScript
+        * 1) Use Math.random() to generate a random decimal.
+          2) Multiply that random decimal by 20.
+          3) Use another function, Math.floor() to round the number down to its nearest whole number.
+            * Remember that Math.random() can never quite return a 1 and, because we're rounding down, it's impossible to actually get 20. This technique will give us a whole number between 0 and 19.
+                * Math.floor(Math.random() * 20);
+    * Generate Random Whole Numbers within a Range
+        * Instead of generating a random whole number between zero and a given number like we did before, we can generate a random whole number that falls within a range of two specific numbers.
+        * To do this, we'll define a minimum number min and a maximum number max.
+        * Math.floor(Math.random() * (max - min + 1)) + min
+
+    # PARSEINT
+    * Use the parseInt Function
+     
 
         
 
