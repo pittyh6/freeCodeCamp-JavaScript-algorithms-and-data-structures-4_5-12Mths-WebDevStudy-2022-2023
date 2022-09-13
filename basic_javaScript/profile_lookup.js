@@ -47,20 +47,9 @@ const contacts = [
             return (contacts[i][prop]);
         }else if(name !== contacts[i].firstName){
             //If name does not correspond to any contacts then return the string No such contact.
-
-            // while(name !== contacts[i].firstName){
-            //     console.log("entrou while "+ contacts[i].firstName);
-            //     if(name === contacts[i].firstName){
-            //         console.log("name = firstName: " + contacts[i].firstName);
-            //         return (contacts[i][prop]);
-            //     }else{
-            //         i++;
-            //     }
-            // }
-            while(name !== contacts[i].firstName){
+            while(name !== contacts[i].firstName && (i < contacts.length-1)){
                 i++;
             }
-            console.log("saiu while "+ contacts[i].firstName);
             if(name === contacts[i].firstName){
                 console.log("name = firstName: " + contacts[i].firstName);
                 return (contacts[i][prop]);
@@ -71,26 +60,41 @@ const contacts = [
             
         }else if(contacts[i].hasOwnProperty(prop) === false){
             // If prop does not correspond to any valid properties of a contact found to match name then return the string No such property.
-            console.log("property: " + contacts[i][prop]);
-            while(contacts[i].hasOwnProperty(prop) == false){
+            while((contacts[i].hasOwnProperty(prop) == false) && (i < (contacts.length-1))){
                 i++;
             }
             if(contacts[i].hasOwnProperty(prop) === true){
-                console.log("property: " + contacts[i][prop]);
+                console.log("property: " + (contacts[i][prop]));
                 return (contacts[i][prop]);
             }else{
                 console.log("No such property");
                 return "No such property";
             }
-            //return "No such property";
         }
-        console.log("final: ")
     }
     
     // Only change code above this line
   }
-  
-  //lookUpProfile("Akira", "likes");
-  //lookUpProfile("Bob", "number");
+
+/*
+  function lookUpProfile(name, prop) {
+  for (let x = 0; x < contacts.length; x++) {
+    if (contacts[x].firstName === name) {
+      if (contacts[x].hasOwnProperty(prop)) {
+        console.log("prop: "+ contacts[x][prop])
+        return contacts[x][prop];
+      } else {
+        console.log("no such prop")
+        return "No such property";
+      }
+    }
+  }
+  return "No such contact";
+}
+  */
+
+
+  lookUpProfile("Akira", "likes");
+  lookUpProfile("Bob", "number");
   lookUpProfile("Akira", "address");
-  //lookUpProfile("Kristian", "lastName");
+  lookUpProfile("Kristian", "lastName");
