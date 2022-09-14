@@ -10,11 +10,8 @@ let arrRange = [];
 function rangeOfNumbers(startNum, endNum) {
     if(startNum <= endNum){
         arrRange.push(startNum);
-        console.log("arrRange: " + arrRange)
         const arrNumbers = startNum + 1;
-        console.log("after array: " + arrNumbers)
         rangeOfNumbers(arrNumbers,endNum);
-        console.log("arrRange end: " + arrRange);
         return arrRange;
     }else{
         return [];
