@@ -47,7 +47,22 @@
             * const myFunc = () => "value";
                 * const magic = () => new Date();
     * Write Arrow Functions with Parameters
-        
-        
+        * Just like a regular function, you can pass arguments into an arrow function.
+            * const doubler = (item) => item * 2;
+                doubler(4);
+        * If an arrow function has a single parameter, the parentheses enclosing the parameter may be omitted.
+            * const doubler = item => item * 2;
+        * It is possible to pass more than one argument into an arrow function.
+           * const multiplier = (item, multi) => item * multi;
+              multiplier(4, 2);
+    * Set Default Parameters for Your Functions
+        * In order to help us create more flexible functions, ES6 introduces default parameters for functions.
+            * const greeting = (name = "Anonymous") => "Hello " + name;
+              console.log(greeting("John"));
+              console.log(greeting());
+                * The console will display the strings Hello John and Hello Anonymous.
+            * The default parameter kicks in when the argument is not specified (it is undefined). As you can see in the example above, the parameter name will receive its default value Anonymous when you do not provide a value for the parameter. You can add default values for as many parameters as you want.
+    * Use the Rest Parameter with Function Parameters
+    
 
 ![End Banner](Documentation/botton-1200x350.gif)
