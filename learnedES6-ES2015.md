@@ -62,7 +62,30 @@
               console.log(greeting());
                 * The console will display the strings Hello John and Hello Anonymous.
             * The default parameter kicks in when the argument is not specified (it is undefined). As you can see in the example above, the parameter name will receive its default value Anonymous when you do not provide a value for the parameter. You can add default values for as many parameters as you want.
+
+    # REST PARAMETER
     * Use the Rest Parameter with Function Parameters
-    
+        * In order to help us create more flexible functions, ES6 introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+            * function howMany(...args) {
+                return "You have passed " + args.length + " arguments.";
+              }
+              console.log(howMany(0, 1, 2));
+              console.log(howMany("string", null, [1, 2, 3], { }));
+                * The console would display the strings You have passed 3 arguments. and You have passed 4 arguments..
+        * The rest parameter eliminates the need to check the args array and allows us to apply map(), filter() and reduce() on the parameters array.
+
+    # SPREAD OPERATOR    
+    * Use the Spread Operator to Evaluate Arrays In-Place
+        * ES6 introduces the spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
+            * const arr = [6, 89, 3, 45];
+              const maximus = Math.max(...arr);
+                * maximus would have a value of 89.
+        * ...arr returns an unpacked array. In other words, it spreads the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal. The following code will not work:
+            * const spreaded = ...arr;
+            
+        
+
+
+
 
 ![End Banner](Documentation/botton-1200x350.gif)
