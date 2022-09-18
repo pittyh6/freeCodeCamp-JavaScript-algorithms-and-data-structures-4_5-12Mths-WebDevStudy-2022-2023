@@ -82,10 +82,26 @@
                 * maximus would have a value of 89.
         * ...arr returns an unpacked array. In other words, it spreads the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal. The following code will not work:
             * const spreaded = ...arr;
-            
-        
-
-
+    
+    # DESTRUCTURING ASSIGNMENT
+    * Use Destructuring Assignment to Extract Values from Objects
+        * Destructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
+            * Consider the following ES5 code:
+                * const user = { name: 'John Doe', age: 34 };
+                  const name = user.name;
+                  const age = user.age;
+                  name would have a value of the string John Doe, and age would have the number 34.
+            * Here's an equivalent assignment statement using the ES6 destructuring syntax:
+                * const { name, age } = user;
+                    * Again, name would have a value of the string John Doe, and age would have the number 34.
+    * Use Destructuring Assignment to Assign Variables from Objects
+        * Destructuring allows you to assign a new variable name when extracting values. You can do this by putting the new name after a colon when assigning the value.
+            * Using the same object from the last example:
+                * const user = { name: 'John Doe', age: 34 };
+            * Here's how you can give new variable names in the assignment:
+                * const { name: userName, age: userAge } = user;
+        * You may read it as "get the value of user.name and assign it to a new variable named userName" and so on. The value of userName would be the string John Doe, and the value of userAge would be the number 34.
+    
 
 
 ![End Banner](Documentation/botton-1200x350.gif)
