@@ -126,6 +126,26 @@
             * const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
             * console.log(a, b, c);
                 * The console will display the values of a, b, and c as 1, 2, 5.
+    * Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+        * In some situations involving array destructuring, we might want to collect the rest of the elements into a separate array.
+            * The result is similar to Array.prototype.slice(), as shown below:
+                const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+                console.log(a, b);
+                console.log(arr);
+                * The console would display the values 1, 2 and [3, 4, 5, 7].
+        * Variables a and b take the first and second values from the array. After that, because of the rest parameter's presence, arr gets the rest of the values in the form of an array. The rest element only works correctly as the last variable in the list. As in, you cannot use the rest parameter to catch a subarray that leaves out the last element of the original array
+    * Use Destructuring Assignment to Pass an Object as a Function's Parameters
+        * In some cases, you can destructure the object in a function argument itself.
+            * Consider the code below:
+                const profileUpdate = (profileData) => {
+                  const { name, age, nationality, location } = profileData;
                 
+                }
+            * This effectively destructures the object sent into the function. This can also be done in-place:
+                const profileUpdate = ({ name, age, nationality, location }) => {
+
+                }
+            * When profileData is passed to the above function, the values are destructured from the function parameter for use within the function
+
 
 ![End Banner](Documentation/botton-1200x350.gif)
