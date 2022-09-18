@@ -101,7 +101,31 @@
             * Here's how you can give new variable names in the assignment:
                 * const { name: userName, age: userAge } = user;
         * You may read it as "get the value of user.name and assign it to a new variable named userName" and so on. The value of userName would be the string John Doe, and the value of userAge would be the number 34.
-    
-
+    * Use Destructuring Assignment to Assign Variables from Nested Objects
+        * You can use the same principles from the previous two lessons to destructure values from nested objects.
+            * Using an object similar to previous examples:
+            * const user = {
+                johnDoe: { 
+                  age: 34,
+                  email: 'johnDoe@freeCodeCamp.com'
+                }
+              };
+            * Here's how to extract the values of object properties and assign them to variables with the same name:
+                * const { johnDoe: { age, email }} = user;
+            * And here's how you can assign an object properties' values to variables with different names:
+                * const { johnDoe: { age: userAge, email: userEmail }
+    * Use Destructuring Assignment to Assign Variables from Arrays
+        * ES6 makes destructuring arrays as easy as destructuring objects.
+        * One key difference between the spread operator and array destructuring is that the spread operator unpacks all contents of an array into a comma-separated list. Consequently, you cannot pick or choose which elements you want to assign to variables.
+        * Destructuring an array lets us do exactly that:
+            * const [a, b] = [1, 2, 3, 4, 5, 6];
+            * console.log(a, b);
+                * The console will display the values of a and b as 1, 2.
+                * The variable a is assigned the first value of the array, and b is assigned the second value of the array.
+        * We can also access the value at any index in an array with destructuring by using commas to reach the desired index:
+            * const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+            * console.log(a, b, c);
+                * The console will display the values of a, b, and c as 1, 2, 5.
+                
 
 ![End Banner](Documentation/botton-1200x350.gif)
