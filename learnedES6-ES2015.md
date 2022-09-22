@@ -160,6 +160,29 @@
               console.log(greeting);
                 * The console will display the strings Hello, my name is Zodiac Hasbro! and I am 56 years old..
             * A lot of things happened there. Firstly, the example uses backticks (`), not quotes (' or "), to wrap the string. Secondly, notice that the string is multi-line, both in the code and the output. This saves inserting \n within strings. The ${variable} syntax used above is a placeholder. Basically, you won't have to use concatenation with the + operator anymore. To add variables to strings, you just drop the variable in a template string and wrap it with ${ and }. Similarly, you can include other expressions in your string literal, for example ${a + b}. This new way of creating strings gives you more flexibility to create robust strings.
-    * 
+    * Write Concise Object Literal Declarations Using Object Property Shorthand
+        * ES6 adds some nice support for easily defining object literals.
+            * const getMousePosition = (x, y) => ({
+                x: x,
+                y: y
+              });
+        * getMousePosition is a simple function that returns an object containing two properties. ES6 provides the syntactic sugar to eliminate the redundancy of having to write x: x. You can simply write x once, and it will be converted tox: x (or something equivalent) under the hood. Here is the same function from above rewritten to use this new syntax:
+            * const getMousePosition = (x, y) => ({ x, y });
+
+    * Write Concise Declarative Functions with ES6
+        * When defining functions within objects in ES5, we have to use the keyword function as follows:
+            * const person = {
+                name: "Taylor",
+                sayHello: function() {
+                return `Hello! My name is ${this.name}.`;
+                }
+            };
+        * With ES6, you can remove the function keyword and colon altogether when defining functions in objects. Here's an example of this syntax:
+            * const person = {
+              name: "Taylor",
+              sayHello() {
+                return `Hello! My name is ${this.name}.`;
+              }
+            };
 
 ![End Banner](Documentation/botton-1200x350.gif)
