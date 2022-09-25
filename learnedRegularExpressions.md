@@ -82,6 +82,32 @@
                   bogStr.match(bgRegex);
                     * In order, the four match calls would return the values ["big"], ["bag"], ["bug"], and null.
     * Match Letters of the Alphabet
+        * You saw how you can use character sets to specify a group of characters to match, but that's a lot of typing when you need to match a large range of characters (for example, every letter in the alphabet). Fortunately, there is a built-in feature that makes this short and simple.
+            * Inside a character set, you can define a range of characters to match using a hyphen character: -.
+            * For example, to match lowercase letters a through e you would use [a-e].
+                * let catStr = "cat";
+                  let batStr = "bat";
+                  let matStr = "mat";
+                  let bgRegex = /[a-e]at/;
+                  catStr.match(bgRegex);
+                  batStr.match(bgRegex);
+                  matStr.match(bgRegex);
+                    * In order, the three match calls would return the values ["cat"], ["bat"], and null.
+    * Match Numbers and Letters of the Alphabet
+        * Using the hyphen (-) to match a range of characters is not limited to letters. It also works to match a range of numbers.
+        * For example, /[0-5]/ matches any number between 0 and 5, including the 0 and 5.
+            * Also, it is possible to combine a range of letters and numbers in a single character set.
+                * let jennyStr = "Jenny8675309";
+                  let myRegex = /[a-z0-9]/ig;
+                  jennyStr.match(myRegex);
+    * Match Single Characters Not Specified
+        * So far, you have created a set of characters that you want to match, but you could also create a set of characters that you do not want to match. These types of character sets are called negated character sets.
+        * To create a negated character set, you place a caret character (^) after the opening bracket and before the characters you do not want to match.
+            * For example, /[^aeiou]/gi matches all characters that are not a vowel. Note that characters like ., !, [, @, / and white space are matched - the negated vowel character set only excludes the vowel characters.
+    * Match Characters that Occur One or More Times
+        * 
+
+
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
