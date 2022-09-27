@@ -155,7 +155,37 @@
 
     # letters and numbers
     * Match All Letters and Numbers
-        
+        * Using character classes, you were able to search for all letters of the alphabet with [a-z]. This kind of character class is common enough that there is a shortcut for it, although it includes a few extra characters as well.
+        * The closest character class in JavaScript to match the alphabet is \w. This shortcut is equal to [A-Za-z0-9_]. This character class matches upper and lowercase letters plus numbers. Note, this character class also includes the underscore character (_).
+            * let longHand = /[A-Za-z0-9_]+/;
+             let shortHand = /\w+/;
+             let numbers = "42";
+             let varNames = "important_var";
+             longHand.test(numbers);
+             shortHand.test(numbers);
+             longHand.test(varNames);
+             shortHand.test(varNames);
+             * All four of these test calls would return true. 
+        * These shortcut character classes are also known as shorthand character classes.
+    * Match Everything But Letters and Numbers
+        * You've learned that you can use a shortcut to match alphanumerics [A-Za-z0-9_] using \w. A natural pattern you might want to search for is the opposite of alphanumerics.
+        * You can search for the opposite of the \w with \W. Note, the opposite pattern uses a capital letter. This shortcut is the same as [^A-Za-z0-9_].
+            * let shortHand = /\W/;
+              let numbers = "42%";
+              let sentence = "Coding!";
+              numbers.match(shortHand);
+              sentence.match(shortHand);
+                * The first match call would return the value ["%"] and the second would return ["!"].
+    # numbers
+    * Match All Numbers
+        * You've learned shortcuts for common string patterns like alphanumerics. Another common pattern is looking for just digits or numbers.
+        * The shortcut to look for digit characters is \d, with a lowercase d. This is equal to the character class [0-9], which looks for a single character of any number between zero and nine.
+    * Match All Non-Numbers
+        * The last challenge showed how to search for digits using the shortcut \d with a lowercase d. You can also search for non-digits using a similar shortcut that uses an uppercase D instead.
+        * The shortcut to look for non-digit characters is \D. This is equal to the character class [^0-9], which looks for a single character that is not a number between zero and nine.
+    
+    
+
 
     
 
