@@ -132,6 +132,29 @@
         * Regular expressions are by default greedy, so the match would return ["titani"]. It finds the largest sub-string possible to fit the pattern.
         * However, you can use the ? character to change it to lazy matching. "titanic" matched against the adjusted regex of /t[a-z]*?i/ returns ["ti"].
         * Note: Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
+    
+    # String Pattern Beginning/end
+    * Match Beginning String Patterns
+        * Prior challenges showed that regular expressions can be used to look for a number of matches. They are also used to search for patterns in specific positions in strings.
+        * In an earlier challenge, you used the caret character (^) inside a character set to create a negated character set in the form [^thingsThatWillNotBeMatched]. Outside of a character set, the caret is used to search for patterns at the beginning of strings.
+            * let firstString = "Ricky is first and can be found.";
+            let firstRegex = /^Ricky/;
+            firstRegex.test(firstString);
+            let notFirst = "You can't find Ricky now.";
+            firstRegex.test(notFirst);
+            * The first test call would return true, while the second would return false.
+    * Match Ending String Patterns
+        * In the last challenge, you learned to use the caret character to search for patterns at the beginning of strings. There is also a way to search for patterns at the end of strings.
+        * You can search the end of strings using the dollar sign character $ at the end of the regex.=
+            * let theEnding = "This is a never ending story";
+            let storyRegex = /story$/;
+            storyRegex.test(theEnding);
+            let noEnding = "Sometimes a story will have to end";
+            storyRegex.test(noEnding);
+            * The first test call would return true, while the second would return false.
+
+    # letters and numbers
+    * Match All Letters and Numbers
         
 
     
