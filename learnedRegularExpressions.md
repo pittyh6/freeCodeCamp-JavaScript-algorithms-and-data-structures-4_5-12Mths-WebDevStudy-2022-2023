@@ -32,6 +32,7 @@
         * This is powerful to search single strings, but it's limited to only one pattern. You can search for multiple patterns using the alternation or OR operator: |.
         * This operator matches patterns either before or after it. For example, if you wanted to match the strings yes or no, the regex you want is /yes|no/.
         * You can also search for more than just two patterns. You can do this by adding more patterns with more OR operators separating them, like /yes|no|maybe/.
+    # lowercase UpperCase
     * Ignore Case While Matching
         * Up until now, you've looked at regexes to do literal matches of strings. But sometimes, you might want to also match case differences.
             * Case (or sometimes letter case) is the difference between uppercase letters and lowercase letters. Examples of uppercase are A, B, and C. Examples of lowercase are a, b, and c.
@@ -47,6 +48,7 @@
         * Note that the .match syntax is the "opposite" of the .test method you have been using thus far:
             * 'string'.match(/regex/);
             * /regex/.test('string');
+    # g => global
     * Find More Than the First Match
         * So far, you have only been able to extract or search a pattern once.
             * let testStr = "Repeat, Repeat, Repeat";
@@ -58,6 +60,7 @@
                   testStr.match(repeatRegex);
                     * And here match returns the value ["Repeat", "Repeat", "Repeat"]
             * Note You can have multiple flags on your regex like /Repeat/gi
+    # . Whatever comes after/before the .
     * Match Anything with Wildcard Period
         * Sometimes you won't (or don't need to) know the exact characters in your patterns. Thinking of all words that match, say, a misspelling would take a long time. Luckily, you can save time using the wildcard character: .
         * The wildcard character . will match any one character. The wildcard is also called dot and period. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match hug, huh, hut, and hum, you can use the regex /hu./ to match all four words.
@@ -67,6 +70,7 @@
               huRegex.test(humStr);
               huRegex.test(hugStr);
                 * Both of these test calls would return true.
+    
     * Match Single Character with Multiple Possibilities
         * You learned how to match literal patterns (/literal/) and wildcard character (/./). Those are the extremes of regular expressions, where one finds exact matches and the other matches everything. There are options that are a balance between the two extremes.
         * You can search for a literal pattern with some flexibility with character classes. Character classes allow you to define a group of characters you wish to match by placing them inside square ([ and ]) brackets.
@@ -105,9 +109,22 @@
         * To create a negated character set, you place a caret character (^) after the opening bracket and before the characters you do not want to match.
             * For example, /[^aeiou]/gi matches all characters that are not a vowel. Note that characters like ., !, [, @, / and white space are matched - the negated vowel character set only excludes the vowel characters.
     * Match Characters that Occur One or More Times
+        * Sometimes, you need to match a character (or group of characters) that appears one or more times in a row. This means it occurs at least once, and may be repeated.
+        * You can use the + character to check if that is the case. Remember, the character or pattern has to be present consecutively. That is, the character has to repeat one after the other.
+        * For example, /a+/g would find one match in abc and return ["a"]. Because of the +, it would also find a single match in aabc and return ["aa"].
+        * If it were instead checking the string abab, it would find two matches and return ["a", "a"] because the a characters are not in a row - there is a b between them. Finally, since there is no a in the string bcd, it wouldn't find a match.
+    * Match Characters that Occur Zero or More Times
+        * The last challenge used the plus + sign to look for characters that occur one or more times. There's also an option that matches characters that occur zero or more times.
+        * The character to do this is the asterisk or star: *.
+            * let soccerWord = "gooooooooal!";
+                let gPhrase = "gut feeling";
+                let oPhrase = "over the moon";
+                let goRegex = /go*/;
+                soccerWord.match(goRegex);
+                gPhrase.match(goRegex);
+                oPhrase.match(goRegex);
+                * In order, the three match calls would return the values ["goooooooo"], ["g"], and null.
+    * Find Characters with Lazy Matching
         * 
-
-
-
 
 ![End Banner](/Documentation/botton-1200x350.gif)
