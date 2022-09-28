@@ -199,7 +199,7 @@
               whiteSpace.match(nonSpaceRegex).length;
                 * The value returned by the .length method would be 32.
 
-    # Upper and Lower Number
+    # Upper and Lower Number {..,..} {..,} {...}
     * Specify Upper and Lower Number of Matches
         * Recall that you use the plus sign + to look for one or more characters and the asterisk * to look for zero or more characters. These are convenient but sometimes you want to match a certain range of patterns.
         * You can specify the lower and upper number of patterns with quantity specifiers. Quantity specifiers are used with curly brackets ({ and }). You put two numbers between the curly brackets - for the lower and upper number of patterns.
@@ -235,7 +235,7 @@
                multipleHA.test(A100);
                 * In order, the three test calls would return false, true, and false.
 
-    # all or none
+    # all or none ?
     * Check for All or None
         * Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
         * You can specify the possible existence of an element with a question mark, ?. This checks for zero or one of the preceding element. You can think of this symbol as saying the previous element is optional.
@@ -247,7 +247,7 @@
               rainbowRegex.test(british);
                 * Both uses of the test method would return true.
     
-    # Lookahead
+    # Lookahead (?=) (?!)
     * Positive and Negative Lookahead
         * Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along. This can be useful when you want to search for multiple patterns over the same string.
         * There are two kinds of lookaheads: positive lookahead and negative lookahead.
@@ -265,7 +265,17 @@
             * let password = "abc123";
               let checkPass = /(?=\w{3,6})(?=\D*\d)/;
               checkPass.test(password);
-    * 
+    
+
+    # mixed characters ()
+    * Check For Mixed Grouping of Characters
+        * Sometimes we want to check for groups of characters using a Regular Expression and to achieve that we use parentheses ().
+        * If you want to find either Penguin or Pumpkin in a string, you can use the following Regular Expression: /P(engu|umpk)in/g
+            * Then check whether the desired string groups are in the test string by using the test() method.
+                * let testStr = "Pumpkin";
+                  let testRegex = /P(engu|umpk)in/;
+                  testRegex.test(testStr);
+                    * The test method here would return true.
 
     
 
