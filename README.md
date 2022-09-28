@@ -11,6 +11,7 @@
 * JavaScript [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedJAVASCRIPT.md)
 * ES6 / ES2015 [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedES6-ES2015.md)
 * JavaScript - Regular Expressions [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedRegularExpressions.md)
+* JavaScript - Debugging [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedRegularExpressions.md)
 <!-- 
 * CSS [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3-12Mths-WebDevStudy-2022-2023/blob/master/learnedCSS.md)
 * HTML [link](https://github.com/pittyh6/freeCodeCamp-responsive_web_design-3-12Mths-WebDevStudy-2022-2023/blob/master/learnedHTML.md)
@@ -29,6 +30,10 @@
 * Basic JavaScript learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedJAVASCRIPT.md)
 * ES6/ES2015 Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/tree/master/ES6)
 * ES6/ES2015 learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedES6-ES2015.md)
+* Regex Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/tree/master/js_regular_expression)
+* Regex learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedRegularExpressions.md)
+* Debugging Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/tree/master/debugging)
+* Debugging learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedDebugging.md)
 
 ## Previous Projects
 * (1 mth) 12Mths Web Development Study [link](https://github.com/pittyh6/1-12Mths-WebDevelopmentStudy-2022-2023)
