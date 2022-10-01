@@ -34,6 +34,8 @@
 * Regex learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedRegularExpressions.md)
 * Debugging Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/tree/master/debugging)
 * Debugging learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedDebugging.md)
+* Debugging Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/tree/master/basic_data_structure)
+* Debugging learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4-12Mths-WebDevStudy-2022-2023/blob/master/learnedBasicDataStructure.md)
 
 ## Previous Projects
 * (1 mth) 12Mths Web Development Study [link](https://github.com/pittyh6/1-12Mths-WebDevelopmentStudy-2022-2023)
