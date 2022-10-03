@@ -88,6 +88,20 @@
 
 # SLICE()
 * Copy Array Items Using slice()
+    * The next method we will cover is slice(). Rather than modifying an array, slice() copies or extracts a given number of elements to a new array, leaving the array it is called upon untouched. slice() takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index). Consider this:
+        * let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
+          let todaysWeather = weatherConditions.slice(1, 3);
+            * todaysWeather would have the value ['snow', 'sleet'], while weatherConditions would still have ['rain', 'snow', 'sleet', 'hail', 'clear'].
+                * In effect, we have created a new array by extracting elements from an existing array.
 
+# SPREAD operator ...
+* Copy an Array with the Spread Operator
+    * While slice() allows us to be selective about what elements of an array to copy, among several other useful tasks, ES6's new spread operator allows us to easily copy all of an array's elements, in order, with a simple and highly readable syntax. The spread syntax simply looks like this: ...
+    * In practice, we can use the spread operator to copy an array like so:
+        * let thisArray = [true, true, undefined, false, null];
+          let thatArray = [...thisArray];
+            * thatArray equals [true, true, undefined, false, null]. thisArray remains unchanged and thatArray contains the same elements as thisArray.
+* Combine Arrays with the Spread Operator
+    * 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
