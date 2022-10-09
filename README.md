@@ -62,4 +62,7 @@
 <br>
 <br>
 
+<p>The content belongs to <a href="https://www.freecodecamp.org/learn">freeCodeCamp.</a> </p>
+<p>Do not use the files from my github account, but use the original content on the <a href="https://www.freecodecamp.org/learn">freeCodeCamp.</a> website.</p>
+
 ![End Banner](/Documentation/botton-1200x350.gif)
