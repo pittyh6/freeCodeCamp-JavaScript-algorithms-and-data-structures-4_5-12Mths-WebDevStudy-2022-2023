@@ -204,7 +204,11 @@
   * In earlier challenges, we have both added to and modified an object's key-value pairs. Here we will see how we can remove a key-value pair from an object.
     * If we wanted to remove the apples key, we can remove it by using the delete keyword like this:
       * delete foods.apples;
-      
+# OBJECT properties
+* Check if an Object has a Property
+  * Now we can add, modify, and remove keys from objects. But what if we just wanted to know if an object has a specific property? JavaScript provides us with two different ways to do this. One uses the hasOwnProperty() method and the other uses the in keyword. If we have an object users with a property of Alan, we could check for its presence in either of the following ways:
+    * users.hasOwnProperty('Alan');
+    * 'Alan' in users;
 
 
 
