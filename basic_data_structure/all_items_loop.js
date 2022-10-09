@@ -9,16 +9,11 @@ Modify the function, using a for loop, to return a filtered version of the passe
 function filteredArray(arr, elem) {
     let newArr = [];
     // Only change code below this line
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length; j++) {
-            if (arr[i][j] == elem) {
-                console.log("igual: " + arr[i][j] + " elem: " + elem + " arr: " + arr[i])
-            } else {
-                console.log("not iqual: " + arr[i][j] + " elem: " + elem + " arr: " + arr[i])
-                newArr.push(arr[i])
-            }
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].indexOf(elem) == -1){
+            newArr.push(arr[i]);
+            console.log("newArr: " + newArr)
         }
-
     }
     // Only change code above this line
     console.log("result: " + newArr)
@@ -26,6 +21,7 @@ function filteredArray(arr, elem) {
 }
 
 console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+console.log(filteredArray([[10, 8, 3], [14, 6, 23]]));
 
 
 //Second version 
