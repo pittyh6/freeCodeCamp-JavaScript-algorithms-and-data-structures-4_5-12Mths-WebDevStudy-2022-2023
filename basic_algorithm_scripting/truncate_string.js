@@ -5,7 +5,13 @@ Return the truncated string with a ... ending.
 */
 
 function truncateString(str, num) {
-    return str;
+  if(str.length > num){
+    let max = str.slice(0, num) + "..."
+    console.log(max)
+    return max
+  }else{
+    return str
+  } 
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
