@@ -6,10 +6,11 @@ Boolean primitives are true and false.
 */
 
 function booWho(bool) {
-    console.log("test")
-    console.log("test Second pc")
-    return bool;
-    
+    return typeof(bool) === "boolean" ? true : false 
 }
 
 booWho(null);
+booWho(true)
+booWho([1, 2, 3])
+booWho([].slice)
+booWho({ "a": 1 })
