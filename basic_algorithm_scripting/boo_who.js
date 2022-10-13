@@ -6,7 +6,9 @@ Boolean primitives are true and false.
 */
 
 function booWho(bool) {
+    console.log("test")
     return bool;
+    
 }
 
 booWho(null);
