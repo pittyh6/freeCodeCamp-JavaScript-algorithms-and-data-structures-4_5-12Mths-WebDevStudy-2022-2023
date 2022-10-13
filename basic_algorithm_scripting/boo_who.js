@@ -7,6 +7,7 @@ Boolean primitives are true and false.
 
 function booWho(bool) {
     console.log("test")
+    console.log("test Second pc")
     return bool;
     
 }
