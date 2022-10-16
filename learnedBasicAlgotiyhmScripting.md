@@ -109,8 +109,54 @@ cardinal.color
 cardinal.numLegs
 The constructor is more flexible. It's now possible to define the properties for each Bird at the time it is created, which is one way that JavaScript constructors are so useful. They group objects together based on shared characteristics and behavior and define a blueprint that automates their creation.
 
-# 
-    
+# Object's Constructor with instanceof
+* Verify an Object's Constructor with instanceof
+Anytime a constructor function creates a new object, that object is said to be an instance of its constructor. JavaScript gives a convenient way to verify this with the instanceof operator. instanceof allows you to compare an object to a constructor, returning true or false based on whether or not that object was created with the constructor. Here's an example:
+
+let Bird = function(name, color) {
+  this.name = name;
+  this.color = color;
+  this.numLegs = 2;
+}
+
+let crow = new Bird("Alexis", "black");
+
+crow instanceof Bird;
+This instanceof method would return true.
+
+If an object is created without using a constructor, instanceof will verify that it is not an instance of that constructor:
+
+let canary = {
+  name: "Mildred",
+  color: "Yellow",
+  numLegs: 2
+};
+
+canary instanceof Bird;
+This instanceof method would return false.
+
+# Own Properties
+* In the following example, the Bird constructor defines two properties: name and numLegs:
+
+function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let duck = new Bird("Donald");
+let canary = new Bird("Tweety");
+name and numLegs are called own properties, because they are defined directly on the instance object. That means that duck and canary each has its own separate copy of these properties. In fact every instance of Bird will have its own copy of these properties. The following code adds all of the own properties of duck to the array ownProps:
+
+let ownProps = [];
+
+for (let property in duck) {
+  if(duck.hasOwnProperty(property)) {
+    ownProps.push(property);
+  }
+}
+
+console.log(ownProps);
+The console would display the value ["name", "numLegs"].
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
