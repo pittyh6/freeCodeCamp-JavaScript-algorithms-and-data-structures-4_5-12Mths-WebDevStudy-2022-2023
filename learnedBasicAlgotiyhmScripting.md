@@ -26,19 +26,17 @@
           };
         console.log(duck.name);
             * Dot notation is used on the object name, duck, followed by the name of the property, name, to access the value of Aflac.
-# Method
-* Create a Method on an Object
+#  Create a Method on an Object
     * Objects can have a special type of property, called a method.
     * Methods are properties that are functions. This adds different behavior to an object. Here is the duck example with a method:
-        * let duck = {
+* let duck = {
             name: "Aflac",
             numLegs: 2,
             sayName: function() {return "The name of this duck is " + duck.name + ".";}
           };
           duck.sayName();
-            * The example adds the sayName method, which is a function that returns a sentence giving the name of the duck. Notice that the method accessed the name property in the return statement using duck.name. The next challenge will cover another way to do this.
-# this keyword
-* Make Code More Reusable with the this Keyword
+* The example adds the sayName method, which is a function that returns a sentence giving the name of the duck. Notice that the method accessed the name property in the return statement using duck.name. The next challenge will cover another way to do this.
+# Make Code More Reusable with the this Keyword
     * The last challenge introduced a method to the duck object. It used duck.name dot notation to access the value for the name property within the return statement:
         * sayName: function() {return "The name of this duck is " + duck.name + ".";}
         * While this is a valid way to access the object's property, there is a pitfall here. If the variable name changes, any code referencing the original name would need to be updated as well. In a short object definition, it isn't a problem, but if an object has many references to its properties there is a greater chance for error.
@@ -49,8 +47,7 @@
               sayName: function() {return "The name of this duck is " + this.name + ".";}
             };
         * this is a deep topic, and the above example is only one way to use it. In the current context, this refers to the object that the method is associated with: duck. If the object's name is changed to mallard, it is not necessary to find all the references to duck in the code. It makes the code reusable and easier to read.
-# Constructor Function
-* Define a Constructor Function
+#  Define a Constructor Function
 Constructors are functions that create new objects. They define properties and behaviors that will belong to the new object. Think of them as a blueprint for the creation of new objects.
 
 Here is an example of a constructor:
@@ -65,8 +62,7 @@ This constructor defines a Bird object with properties name, color, and numLegs 
 Constructors are defined with a capitalized name to distinguish them from other functions that are not constructors.
 Constructors use the keyword this to set properties of the object they will create. Inside the constructor, this refers to the new object it will create.
 Constructors define properties and behaviors instead of returning a value as other functions might.
-# Constructor to Create Objects
-* Use a Constructor to Create Objects
+# Use a Constructor to Create Objects
 Here's the Bird constructor from the previous challenge:
 
 function Bird() {
@@ -88,8 +84,7 @@ Just like any other object, its properties can be accessed and modified:
 blueBird.name = 'Elvira';
 blueBird.name;
 
-# Constructors to Receive Arguments
-* Extend Constructors to Receive Arguments
+# Extend Constructors to Receive Arguments
 The Bird and Dog constructors from the last challenge worked well. However, notice that all Birds that are created with the Bird constructor are automatically named Albert, are blue in color, and have two legs. What if you want birds with different values for name and color? It's possible to change the properties of each bird manually but that would be a lot of work:
 
 let swan = new Bird();
@@ -109,8 +104,7 @@ cardinal.color
 cardinal.numLegs
 The constructor is more flexible. It's now possible to define the properties for each Bird at the time it is created, which is one way that JavaScript constructors are so useful. They group objects together based on shared characteristics and behavior and define a blueprint that automates their creation.
 
-# Object's Constructor with instanceof
-* Verify an Object's Constructor with instanceof
+# Verify an Object's Constructor with instanceof
 Anytime a constructor function creates a new object, that object is said to be an instance of its constructor. JavaScript gives a convenient way to verify this with the instanceof operator. instanceof allows you to compare an object to a constructor, returning true or false based on whether or not that object was created with the constructor. Here's an example:
 
 let Bird = function(name, color) {
@@ -135,7 +129,7 @@ let canary = {
 canary instanceof Bird;
 This instanceof method would return false.
 
-# Own Properties
+# Understand Own Properties
 * In the following example, the Bird constructor defines two properties: name and numLegs:
 
 function Bird(name) {
@@ -157,6 +151,73 @@ for (let property in duck) {
 
 console.log(ownProps);
 The console would display the value ["name", "numLegs"].
+
+# Use Prototype Properties to Reduce Duplicate Code
+Bird.prototype.numLegs = 2;
+Now all instances of Bird have the numLegs property.
+console.log(duck.numLegs);
+console.log(canary.numLegs);
+* function Dog(name) {
+  this.name = name;
+}
+Dog.prototype.numLegs = 4
+let beagle = new Dog("Snoopy");
+# Iterate Over All Properties
+function Bird(name) {
+  this.name = name;  //own property
+}
+
+Bird.prototype.numLegs = 2; // prototype property
+
+let duck = new Bird("Donald");
+Here is how you add duck's own properties to the array ownProps and prototype properties to the array prototypeProps:
+
+let ownProps = [];
+let prototypeProps = [];
+
+for (let property in duck) {
+  if(duck.hasOwnProperty(property)) {
+    ownProps.push(property);
+  } else {
+    prototypeProps.push(property);
+  }
+}
+
+console.log(ownProps);
+console.log(prototypeProps);
+console.log(ownProps) would display ["name"] in the console, and console.log(prototypeProps) would display ["numLegs"].
+
+# Understand the Constructor Property
+function joinBirdFraternity(candidate) {
+  if (candidate.constructor === Bird) {
+    return true;
+  } else {
+    return false;
+  }
+}
+Note: Since the constructor property can be overwritten (which will be covered in the next two challenges) it’s generally better to use the instanceof method to check the type of an object.
+
+# Change the Prototype to a New Object
+* A more efficient way is to set the prototype to a new object that already contains the properties. This way, the properties are added all at once:
+
+Bird.prototype = {
+  numLegs: 2, 
+  eat: function() {
+    console.log("nom nom nom");
+  },
+  describe: function() {
+    console.log("My name is " + this.name);
+  }
+};
+
+# Remember to Set the Constructor Property when Changing the Prototype
+
+
+
+
+
+
+
 
 
 ![End Banner](/Documentation/botton-1200x350.gif)
