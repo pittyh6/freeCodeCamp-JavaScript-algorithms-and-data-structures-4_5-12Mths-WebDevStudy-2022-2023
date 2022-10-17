@@ -45,6 +45,8 @@
 * Basic Algorithm Scripting learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedBasicAlgotiyhmScripting.md)
 * Object Oriented Programming Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/tree/master/object_oriented_programming)
 * Object Oriented Programming learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedObjectOrientedProgramming.md)
+* Functional Programing Coding [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/tree/master/functional_programing)
+* Functional Programing learning [link](https://github.com/pittyh6/freeCodeCamp-JavaScript-algorithms-and-data-structures-4_5-12Mths-WebDevStudy-2022-2023/blob/master/learnedFunctionalPrograming.md)
 
 ## Previous Projects
 * (1 mth) 12Mths Web Development Study [link](https://github.com/pittyh6/1-12Mths-WebDevelopmentStudy-2022-2023)
