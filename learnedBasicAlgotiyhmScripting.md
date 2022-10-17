@@ -351,8 +351,124 @@ Bird.prototype.constructor = Bird;
 duck.constructor
 
 # Add Methods After Inheritance
-* 
+* A constructor function that inherits its prototype object from a supertype constructor function can still have its own methods in addition to inherited methods.
 
+For example, Bird is a constructor that inherits its prototype from Animal:
+
+function Animal() { }
+Animal.prototype.eat = function() {
+  console.log("nom nom nom");
+};
+function Bird() { }
+Bird.prototype = Object.create(Animal.prototype);
+Bird.prototype.constructor = Bird;
+In addition to what is inherited from Animal, you want to add behavior that is unique to Bird objects. Here, Bird will get a fly() function. Functions are added to Bird's prototype the same way as any constructor function:
+
+Bird.prototype.fly = function() {
+  console.log("I'm flying!");
+};
+Now instances of Bird will have both eat() and fly() methods:
+
+let duck = new Bird();
+duck.eat();
+duck.fly();
+duck.eat() would display the string nom nom nom in the console, and duck.fly() would display the string I'm flying!.
+* function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() { }
+
+// Only change code below this line
+Dog.prototype = Object.create(Animal.prototype)
+Dog.prototype.constructor = Dog
+
+Dog.prototype.bark = function(){
+  console.log("Woof!")
+}
+
+// Only change code above this line
+
+let beagle = new Dog();
+# Override Inherited Methods
+* In previous lessons, you learned that an object can inherit its behavior (methods) from another object by referencing its prototype object:
+
+ChildObject.prototype = Object.create(ParentObject.prototype);
+Then the ChildObject received its own methods by chaining them onto its prototype:
+
+ChildObject.prototype.methodName = function() {...};
+It's possible to override an inherited method. It's done the same way - by adding a method to ChildObject.prototype using the same method name as the one to override. Here's an example of Bird overriding the eat() method inherited from Animal:
+
+function Animal() { }
+Animal.prototype.eat = function() {
+  return "nom nom nom";
+};
+function Bird() { }
+
+Bird.prototype = Object.create(Animal.prototype);
+
+Bird.prototype.eat = function() {
+  return "peck peck peck";
+};
+If you have an instance let duck = new Bird(); and you call duck.eat(), this is how JavaScript looks for the method on the prototype chain of duck:
+
+duck => Is eat() defined here? No.
+Bird => Is eat() defined here? => Yes. Execute it and stop searching.
+Animal => eat() is also defined, but JavaScript stopped searching before reaching this level.
+Object => JavaScript stopped searching before reaching this level.
+
+# Use a Mixin to Add Common Behavior Between Unrelated Objects
+* As you have seen, behavior is shared through inheritance. However, there are cases when inheritance is not the best solution. Inheritance does not work well for unrelated objects like Bird and Airplane. They can both fly, but a Bird is not a type of Airplane and vice versa.
+
+For unrelated objects, it's better to use mixins. A mixin allows other objects to use a collection of functions.
+
+let flyMixin = function(obj) {
+  obj.fly = function() {
+    console.log("Flying, wooosh!");
+  }
+};
+The flyMixin takes any object and gives it the fly method.
+
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let plane = {
+  model: "777",
+  numPassengers: 524
+};
+
+flyMixin(bird);
+flyMixin(plane);
+Here bird and plane are passed into flyMixin, which then assigns the fly function to each object. Now bird and plane can both fly:
+
+bird.fly();
+plane.fly();
+The console would display the string Flying, wooosh! twice, once for each .fly() call.
+
+Note how the mixin allows for the same fly method to be reused by unrelated objects bird and plane.
+* let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+// Only change code below this line
+
+let glideMixin = function(obj){
+  obj.glide = function(){
+    console.log("yep")
+  }
+}
+ glideMixin(bird)
+ glideMixin(boat)
+
+ # Use Closure to Protect Properties Within an Object from Being Modified Externally
+ * 
 
 
 
