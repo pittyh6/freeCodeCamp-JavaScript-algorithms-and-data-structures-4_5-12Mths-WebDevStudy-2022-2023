@@ -8,7 +8,6 @@ Note: You can return the array with its elements in any order.
 
 function diffArray(arr1, arr2) {
     const newArr = arr1.concat(arr2).sort().filter(elem => !arr1.includes(elem) || !arr2.includes(elem));
-
     console.log(newArr);
     return newArr;
 }
