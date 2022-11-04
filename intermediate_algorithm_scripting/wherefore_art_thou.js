@@ -11,47 +11,39 @@ because it contains the name and its value, that was passed on as the second arg
 
 
 function whatIsInAName(collection, source) {
-    const arr = [];
-    // Only change code below this line
-    // console.log(collection)
-    // console.log(source)
-
-    let pName = Object.getOwnPropertyNames(source).toString()
-    let pValue = Object.values(source)
-    // console.log(Object.getOwnPropertyNames(source))
-    // console.log(Object.values(source))
-
-    // console.log(pValue)
-
-
-    // console.log(Object.values(collection).indexOf(pValue)> -1)
-    // console.log(collection.filter(elem => elem.hasOwn(pName)))
-    console.log(collection.filter(elem => Object.hasOwn(elem, pName)))
-    if(collection.filter(elem => Object.hasOwn(elem, pValue))){
-        console.log("Entrou")
-    }
-
-    for(let i= 1; i<collection.length; i++) {
-        //if(collection.filter(elem => collection.hasOwnProperty(pName)) && collection.filter(elem => collection.hasOwnProperty(pValue))){
-        if(collection.filter(elem => collection.hasOwnProperty(pName)) && collection.filter(elem => Object.values(elem).indexOf(pValue)> -1)){
-            console.log(pName)
-            console.log("has property Name: " + pName)
-            console.log("has property Value: " + pValue)
-            arr.push(collection[i])
-            console.log(arr)
-        }
-    }
-
-    // if(collection.filter(elem => collection.hasOwnProperty(pName)) && collection.filter(elem => arr.hasOwnProperty(pValue))){
-    //     console.log("has property Name: " + pName)
-    //     console.log("has property Value: " + pValue)
-    //     arr.push({pName: pValue})
-    //     console.log(arr)
-    // }
     
-    // Only change code above this line
-    return arr;
+    const sourceKeys = Object.keys(source)
+
+    return collection.filter(obj => {
+        for(let i = 0; i < sourceKeys.length; i++) {
+            if(!obj.hasOwnProperty(sourceKeys[i]) || obj[sourceKeys[i]] !== source[sourceKeys[i]]){
+                return false;
+            }
+        }
+        return true;
+    })
+    
 }
 
-whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulete" }], { last: "Capulet" });
-// whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 }) // should return [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }]
+//whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+//whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 }) // should return [{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }]
+whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }) //should return [{ "apple": 1, "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }]
+
+
+
+
+/*
+function whatIsInAName(collection, source) {
+  const sourceKeys = Object.keys(source);
+
+  return collection.filter(obj => sourceKeys.every(key => obj.hasOwnProperty(key) && obj[key] === source[key]));
+}
+
+
+function whatIsInAName(collection, source) {
+  const souceKeys = Object.keys(source);
+
+  // filter the collection
+  return collection.filter(obj => souceKeys.map(key => obj.hasOwnProperty(key) && obj[key] === source[key]).reduce((a, b) => a && b));
+}
+*/
