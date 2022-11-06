@@ -12,14 +12,12 @@ Translate the provided string to Pig Latin. Input strings are guaranteed to be E
 */
 function translatePigLatin(str) {
     let myRegex = /[aeiou]/gi
-    let firstLetter
     if (str.charAt(0).match(myRegex)) {
         str += "way"
     } else if (str.match(myRegex) === null) {
         str += "ay"
     } else {
         let vowelIndice = str.indexOf(str.match(myRegex)[0])
-        console.log(vowelIndice)
         str = str.substring(vowelIndice) + str.substring(0, vowelIndice) + "ay"
     }
     console.log(str)
