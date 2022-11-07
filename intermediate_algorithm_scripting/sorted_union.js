@@ -10,22 +10,79 @@ Check the assertion tests for examples.
 */
 
 function uniteUnique(arr) {
-    console.log();
     let newArr = []
-    arr.filter(elem => {
-        if(!newArr.includes(elem)){
-            console.log("not included")
-            newArr.push(elem)
-        }else{
-            console.log("included")
-        }
-    })
+
+    for (let i = 0; i < arguments.length; i++) {
+        arguments[i].filter(elem => {
+            if (!newArr.includes(elem)) {
+                newArr.push(elem)
+            } 
+        })
+    }
     console.log(newArr)
-    return arr;
+    return newArr;
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
-// uniteUnique([1, 2, 3], [5, 2, 1])
-// uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8])
-// uniteUnique([1, 3, 2], [5, 4], [5, 6])
-// uniteUnique([1, 3, 2, 3], [5, 2, 1, 4], [2, 1])
+uniteUnique([1, 2, 3], [5, 2, 1])
+uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8])
+uniteUnique([1, 3, 2], [5, 4], [5, 6])
+uniteUnique([1, 3, 2, 3], [5, 2, 1, 4], [2, 1])
+
+
+
+/*
+function uniteUnique(arr1, arr2, arr3) {
+  const finalArray = [];
+  for (let i = 0; i < arguments.length; i++) {
+    const arrayArguments = arguments[i];
+
+    for (let j = 0; j < arrayArguments.length; j++) {
+      let indexValue = arrayArguments[j];
+
+      if (finalArray.indexOf(indexValue) < 0) {
+        finalArray.push(indexValue);
+      }
+    }
+  }
+  return finalArray;
+}
+
+
+
+
+function uniteUnique(arr) {
+  const args = [...arguments];
+  const result = [];
+  for (let i = 0; i < args.length; i++) {
+    for (let j = 0; j < args[i].length; j++) {
+      if (!result.includes(args[i][j])) {
+        result.push(args[i][j]);
+      }
+    }
+  }
+  return result;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+
+
+
+
+function uniteUnique(...arr) {
+  return [...new Set(arr.flat())];
+}
+// Or as an arrow function
+const uniteUnique = (...arr) => [...new Set(arr.flat())];
+
+
+
+function uniteUnique() {
+  return [...arguments]
+    .flat()
+    .filter((item, ind, arr) => arr.indexOf(item) === ind);
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+*/
