@@ -14,18 +14,25 @@ function sumFibs(num) {
     let firstN = 1
     let secondN = 1
     if(num >=0){
-        for(let i = 1; i <= num; i++){
-            console.log(firstN + secondN)
+        for(let i = 1; i < num-1; i++){
+            console.log("i: "+i)
+            sum += firstN + secondN
+            secondN = firstN + secondN
+            firstN = secondN - firstN
+            console.log("first: " + firstN)
+            console.log("second: "+secondN)
         }
     }else{
         console.log("insert a possitive number")
     }
-    return num;
+    console.log(sum)
+    
+    return sum;
 
 }
 
 sumFibs(4);
-sumFibs(1)// should return a number.
+//sumFibs(1)// should return a number.
 //sumFibs(1000) //should return 1785.
 //sumFibs(4000000)// should return 4613732.
 //sumFibs(4) //should return 5.
