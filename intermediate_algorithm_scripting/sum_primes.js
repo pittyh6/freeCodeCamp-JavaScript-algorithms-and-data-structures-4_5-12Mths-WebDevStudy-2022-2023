@@ -7,7 +7,31 @@ Rewrite sumPrimes so it returns the sum of all prime numbers that are less than 
 
 
 function sumPrimes(num) {
-    return num;
+    let sum = 0;
+    for (let i = 2; i <= num; i++) {
+        if (i > 1 && i <= 3) {
+            console.log("Prime: " + i)
+            sum += i
+        } else if (i % 2 == 0) {
+            //console.log("No prime numbers: " + i)
+        } else if (i % 3 == 0) {
+           // console.log("No prime numbers: " + i)
+        } else if (i > 5 && i % 5 == 0) {
+            //console.log("No prime numbers: " + i)
+        } else if (i > 7 && i % 7 == 0) {
+            //console.log("No prime numbers: " + i)
+        }else if(i % 9 == 0){
+            //console.log("No prime numbers: " + i)
+        } else if (i > 11 && i % 11 == 0) {
+            //console.log("No prime numbers: " + i)
+        } else {
+            console.log("Else - Prime: " + i)
+            sum += i
+        }
+    }
+    console.log("sum: " + sum)
+    return sum;
 }
 
 sumPrimes(10);
+sumPrimes(977)
