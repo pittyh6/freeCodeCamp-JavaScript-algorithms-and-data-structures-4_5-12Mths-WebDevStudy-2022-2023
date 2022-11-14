@@ -15,21 +15,38 @@ If either argument isn't a valid number, return undefined.
 
 
 function addTogether() {
-    if (isNaN(arguments[0]) == false && isNaN(arguments[1]) == false && 
-                typeof arguments[0] !== 'string' && typeof arguments[1] !== 'string') {
+    console.log(arguments.length);
+    const first = arguments[0];
+    console.log(first)
+    if (arguments.length = 2) {
+        if (typeof arguments[0] == 'number' && typeof arguments[1] == 'number') {
+            let sum = arguments[0] + arguments[1]
+            console.log(sum)
+            //return sum
+        } else if (isNaN(arguments[0]) !== false || isNaN(arguments[1] !== false)) {
+            console.log("undefined")
+            return undefined
+        }
+    } else if (arguments.length = 1) {
+        
+    }
+}
+//addTogether(2, 3);
+addTogether(5)(7)
+
+
+
+/*
+if (isNaN(typeof arguments[0] == 'number' && typeof arguments[1] == 'number') ){
         if (arguments.length = 2) {
             let sum = arguments[0] + arguments[1]
             console.log(sum)
-            return sum
-        } 
-    }else if (isNaN(arguments[0]) !== false) {
+            //return sum
+        } else if(arguments.length = 1){
+            console.log("only one")
+        }
+    }else if (isNaN(arguments[0]) !== false || isNaN(arguments[1] !== false)) {
         console.log("undefined")
         return undefined
     }
-
-
-    return false;
-}
-
-addTogether(2, 3);
-addTogether(5)(7)
+*/
