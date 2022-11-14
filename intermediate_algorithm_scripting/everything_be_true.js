@@ -11,7 +11,30 @@ Remember, you can access object properties through either dot notation or [] not
 */
 
 function truthCheck(collection, pre) {
-    return pre;
+    return collection.every(function(dataPoint){
+        console.log(dataPoint[pre]== true)
+        return dataPoint[pre]
+    })
 }
 
 truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "isBot");
+truthCheck([{ name: "Quincy", role: "Founder", isBot: false }, { name: "Naomi", role: "", isBot: false }, { name: "Camperbot", role: "Bot", isBot: true }], "name")
+
+
+
+
+
+/*
+let result = true;
+    for(let i = 0; i < collection.length; i++) {
+        console.log(collection[i][pre])
+        if(collection[i][pre] === undefined ||
+            collection[i][pre] == "" || 
+            collection[i][pre] == null || 
+            Number.isNaN( collection[i][pre])) {
+            result = false;
+            return result
+        }
+    }
+    return result;
+*/
