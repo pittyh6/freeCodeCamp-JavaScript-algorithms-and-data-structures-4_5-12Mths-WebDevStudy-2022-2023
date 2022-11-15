@@ -15,24 +15,37 @@ If either argument isn't a valid number, return undefined.
 
 
 function addTogether() {
-    console.log(arguments.length);
-    const first = arguments[0];
-    console.log(first)
-    if (arguments.length = 2) {
+   
+    if (arguments.length > 1) {
         if (typeof arguments[0] == 'number' && typeof arguments[1] == 'number') {
             let sum = arguments[0] + arguments[1]
             console.log(sum)
-            //return sum
-        } else if (isNaN(arguments[0]) !== false || isNaN(arguments[1] !== false)) {
-            console.log("undefined")
-            return undefined
+            return sum
+        } else if (typeof arguments[0] !== 'number' && typeof arguments[1] !== 'number') {
+            argumentCheck(arguments)
         }
     } else if (arguments.length = 1) {
-        
+        if (typeof arguments[0] !== 'number') {
+            argumentCheck(arguments)
+        }
+    }
+
+}
+
+function argumentCheck(argument){
+    if(typeof argument === 'number'){
+        return argument
+    }else{
+        return undefined;
     }
 }
-//addTogether(2, 3);
-addTogether(5)(7)
+
+
+addTogether(2, 3);
+addTogether("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+//addTogether(5)(7)
+
+
 
 
 
@@ -49,4 +62,53 @@ if (isNaN(typeof arguments[0] == 'number' && typeof arguments[1] == 'number') ){
         console.log("undefined")
         return undefined
     }
+
+
+
+    console.log(arguments.length);
+    const first = arguments[0];
+    console.log(first)
+    if (arguments.length = 2) {
+        if (typeof arguments[0] == 'number' && typeof arguments[1] == 'number') {
+            let sum = arguments[0] + arguments[1]
+            console.log(sum)
+            //return sum
+        } else if (isNaN(arguments[0]) !== false || isNaN(arguments[1] !== false)) {
+            console.log("undefined")
+            return undefined
+        }
+    } else if (arguments.length = 1) {
+        
+    }
+
+
+
+
+function addTogether() {
+   
+    if (arguments.length > 1) {
+        if (typeof arguments[0] == 'number' && typeof arguments[1] == 'number') {
+            let sum = arguments[0] + arguments[1]
+            console.log(sum)
+            return sum
+        } else if (typeof arguments[0] !== 'number' && typeof arguments[1] !== 'number') {
+            argumentCheck(arguments)
+        }
+    } else if (arguments.length = 1) {
+        if (typeof arguments[0] !== 'number') {
+            argumentCheck(arguments)
+        }
+    }
+
+}
+
+function argumentCheck(argument){
+    if(typeof argument === 'number'){
+        return argument
+    }else{
+        return undefined;
+    }
+}
+
+
 */
