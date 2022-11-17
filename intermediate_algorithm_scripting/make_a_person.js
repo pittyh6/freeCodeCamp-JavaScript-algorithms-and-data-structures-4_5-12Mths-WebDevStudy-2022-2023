@@ -18,10 +18,23 @@ const Person = function (firstAndLast) {
     // Only change code below this line
     // Complete the method below and implement the others similarly
     this.getFullName = function () {
-        return "";
+        return firstAndLast;
+    };
+
+    this.getFirstName = function () {
+        let first = firstAndLast.split(" ")
+        console.log(first[0])
+        return first[0]
+    };
+    this.getLastName = function () {
+        let last = firstAndLast.split(" ")
+        console.log(last[1])
+        return last[1]
     };
     return firstAndLast;
 };
 
 const bob = new Person('Bob Ross');
 bob.getFullName();
+bob.getFirstName();
+bob.getLastName();
