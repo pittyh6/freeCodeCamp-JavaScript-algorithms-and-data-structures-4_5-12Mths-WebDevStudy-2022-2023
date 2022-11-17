@@ -17,20 +17,29 @@ These methods must be the only available means of interacting with the object.
 const Person = function (firstAndLast) {
     // Only change code below this line
     // Complete the method below and implement the others similarly
+    let first
+    let last
+
     this.getFullName = function () {
         return firstAndLast;
     };
 
     this.getFirstName = function () {
-        let first = firstAndLast.split(" ")
-        console.log(first[0])
+        splitNames(firstAndLast)
         return first[0]
     };
     this.getLastName = function () {
-        let last = firstAndLast.split(" ")
-        console.log(last[1])
+        splitNames(firstAndLast)
         return last[1]
     };
+
+    function splitNames(firstAndLast){
+        let names = firstAndLast.split(" ")
+        first = names[0]
+        last = names[1]
+        return first,last
+
+    }
     return firstAndLast;
 };
 
