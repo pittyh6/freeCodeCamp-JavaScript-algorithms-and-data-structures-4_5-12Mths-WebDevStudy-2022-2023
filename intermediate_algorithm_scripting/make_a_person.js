@@ -20,19 +20,30 @@ const Person = function (firstAndLast) {
     let first
     let last
 
+    this.setFirstName = function(nFirst) {
+        splitNames(firstAndLast)
+        console.log(firstAndLast)
+        first = nFirst
+        console.log(first)
+        return(first, last)
+    }
+
     this.getFullName = function () {
         return firstAndLast;
     };
 
     this.getFirstName = function () {
         splitNames(firstAndLast)
-        return first[0]
+        console.log(first)
+        return first
     };
     this.getLastName = function () {
         splitNames(firstAndLast)
-        return last[1]
+        console.log(last)
+        return last
     };
-
+   
+    
     function splitNames(firstAndLast){
         let names = firstAndLast.split(" ")
         first = names[0]
@@ -44,6 +55,7 @@ const Person = function (firstAndLast) {
 };
 
 const bob = new Person('Bob Ross');
+bob.setFirstName("Haskell")
 bob.getFullName();
 bob.getFirstName();
 bob.getLastName();
