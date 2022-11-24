@@ -17,45 +17,30 @@ These methods must be the only available means of interacting with the object.
 const Person = function (firstAndLast) {
     // Only change code below this line
     // Complete the method below and implement the others similarly
-    let first
-    let last
-
-    this.setFirstName = function(nFirst) {
-        splitNames(firstAndLast)
-        console.log(firstAndLast)
-        first = nFirst
-        console.log(first)
-        return(first, last)
-    }
-
+    
     this.getFullName = function () {
         return firstAndLast;
     };
-
+    
     this.getFirstName = function () {
-        splitNames(firstAndLast)
-        console.log(first)
-        return first
+        return firstAndLast.split(" ")[0]
     };
     this.getLastName = function () {
-        splitNames(firstAndLast)
-        console.log(last)
-        return last
+        return firstAndLast.split(" ")[1]
     };
-   
     
-    function splitNames(firstAndLast){
-        let names = firstAndLast.split(" ")
-        first = names[0]
-        last = names[1]
-        return first,last
-
+    this.setFullName = function (newFullName){
+        return firstAndLast = newFullName
     }
-    return firstAndLast;
+    
+    this.setFirstName = function(newFirstName) {
+        return firstAndLast = newFirstName + " " + this.getLastName()
+    }
+
+    this.setLastName = function(newLastName){
+        return firstAndLast = this.getFirstName() + " " + newLastName
+    }
 };
 
 const bob = new Person('Bob Ross');
-bob.setFirstName("Haskell")
-bob.getFullName();
-bob.getFirstName();
-bob.getLastName();
+
