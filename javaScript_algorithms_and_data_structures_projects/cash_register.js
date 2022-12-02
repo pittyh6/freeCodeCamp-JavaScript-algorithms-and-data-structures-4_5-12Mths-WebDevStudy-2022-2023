@@ -42,38 +42,37 @@ See below for an example of a cash-in-drawer array:
 function checkCashRegister(price, cash, cid) {
     let change;
     let sum = 0
-    let result = {}
+    let result = { status: "INSUFFICIENT_FUNDS", change: [] }
+
     //console.log(cid)
     for (let values in cid) {
-        console.log(cid[values][1])
+       // console.log(cid[values][1])
         sum += cid[values][1]
     }
     //sum of values in obj
     console.log("sum : ", sum)
     if (sum < price) {
         console.log("price bigger : ", price, sum)
+        console.log("price bigger : ", price, cash)
+        console.log(result)
+        return result
     } else if (sum == price) {
         console.log("price equal sum : ", price, sum)
-    } else {
-        result = sum - price
-        console.log("price lower : ", price, sum, result)
-    }
-
-    //checking cash value
-    if (cash < price) {
-        console.log("price bigger : ", price, cash)
-        return result = { status: "INSUFFICIENT_FUNDS", change: [] }
-    } else if (cash == price) {
         console.log("price equal cash : ", price, cash)
         sum = cash - price
-        return result = { status: "CLOSED", change: [sum] }
+        result.status = "CLOSED"
+        result.change = sum
+        console.log(result)
+        return result
     } else {
         console.log("price lower : ", price, cash)
         sum = cash - price
-
-        return result = { status: "OPEN", change: [sum] }
+        result.status = "OPEN"
+        result.change = sum
+        console.log(result)
+        return result
     }
-    return change;
+
 }
 
 checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
