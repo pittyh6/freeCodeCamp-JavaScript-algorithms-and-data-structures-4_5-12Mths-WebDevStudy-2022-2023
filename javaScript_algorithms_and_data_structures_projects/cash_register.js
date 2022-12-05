@@ -76,65 +76,59 @@ function checkCashRegister(price, cash, cid) {
 
 }
 */
-const DENOMINATIONS = [
-    ["PENNY", 1],
-    ["NICKEL", 5],
-    ["DIME", 10],
-    ["QUARTER", 25],
-    ["DOLLAR", 100],
-    ["FIVE DOLLAR", 500],
 
-]
-
-const REGISTER_STATUS = {
-    closed: "CLOSED",
-    insufficientFunds: "INSUFFICIENT",
-    open: "OPEN"
-}
-
+let denom = [
+    { name: 'ONE HUNDRED', val: 100 },
+    { name: 'TWENTY', val: 20 },
+    { name: 'TEN', val: 10 },
+    { name: 'FIVE', val: 5 },
+    { name: 'ONE', val: 1 },
+    { name: 'QUARTER', val: 0.25 },
+    { name: 'DIME', val: 0.1 },
+    { name: 'NICKEL', val: 0.05 },
+    { name: 'PENNY', val: 0.01 }
+];
 
 function checkCashRegister(price, cash, cid) {
-    let cashRegister = { status: "", change: cid };
-    let changeNeeded = parseFloat(cash - price).toFixed(2)
-    const changeAvailable = getTotalCashRegisterChange(cid)
-    cashRegister.status = getTotalCashRegisterStatus(changeNeeded, changeAvailable);
+    let cashInDrawerStatus = { status: null, change: [] }
+    let change = cash - price
+    let register = cid.reduce(function (acc, curr) {
+        acc.total += curr[1]
+        acc[curr[0]] = curr[1]
+        return acc
+    }, { total: 0 });
 
-    if(cashRegister.status === REGISTER_STATUS.insufficientFunds){
-        cashRegister.change = []
-        return cashRegister
+    if (register.total === change) {
+        cashInDrawerStatus.status = 'CLOSED'
+        cashInDrawerStatus.change = cid
+        return cashInDrawerStatus
+    }
+    if (register.total < change) {
+        cashInDrawerStatus.status = 'INSUFFICIENT_FUNDS';
+        return cashInDrawerStatus;
     }
 
-    cashRegister.change = getCustomersChange(changeNeeded, cid)
-    console.log(changeNeeded)
-
-}
-
-function getCustomersChange(changeNeeded, changeInDrawer) {
-    
-}
-
-function getTotalCashRegisterStatus(changeNeeded, changeAvailable) {
-    if (Number(changeNeeded) > Number(changeAvailable)) {
-        console.log(REGISTER_STATUS.insufficientFunds)
-        return REGISTER_STATUS.insufficientFunds
-    } else if (Number(changeNeeded) < Number(changeAvailable)) {
-        console.log(REGISTER_STATUS.open)
-        return REGISTER_STATUS.open
-    }else{
-        console.log(REGISTER_STATUS.closed)
-        return REGISTER_STATUS.closed
+    let change_arr = denom.reduce(function (acc, curr) {
+        let value = 0
+        while (register[curr.name] > 0 && change >= curr.val) {
+            change -= curr.val
+            register[curr.name] -= curr.val
+            value += curr.val
+            change = Math.round(change * 100) / 100
+        }
+        if(value > 0){
+            acc.push([curr.name, value])
+        }
+        return acc
+    }, []);
+    if(change_arr.length < 1 || change >0){
+        cashInDrawerStatus.status = "INSUFFICIENT_FUNDS"
+        return cashInDrawerStatus
     }
+    cashInDrawerStatus.status = "OPEN"
+    cashInDrawerStatus.change = change_arr
+    console.log(cashInDrawerStatus)
+    return cashInDrawerStatus
 }
-
-function getTotalCashRegisterChange(changeInDrawer) {
-    let total = 0;
-    for (let change of changeInDrawer) {
-        let changeValue = change[1]
-        total += changeValue
-    }
-    console.log(total.toFixed(2))
-    return total.toFixed(2)
-}
-
 
 checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
