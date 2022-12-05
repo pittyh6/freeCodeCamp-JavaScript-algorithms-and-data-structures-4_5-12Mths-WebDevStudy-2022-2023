@@ -39,6 +39,7 @@ See below for an example of a cash-in-drawer array:
 ]
 */
 
+/*
 function checkCashRegister(price, cash, cid) {
     let change;
     let sum = 0
@@ -46,7 +47,7 @@ function checkCashRegister(price, cash, cid) {
 
     //console.log(cid)
     for (let values in cid) {
-       // console.log(cid[values][1])
+        console.log(cid[values][1])
         sum += cid[values][1]
     }
     //sum of values in obj
@@ -74,5 +75,66 @@ function checkCashRegister(price, cash, cid) {
     }
 
 }
+*/
+const DENOMINATIONS = [
+    ["PENNY", 1],
+    ["NICKEL", 5],
+    ["DIME", 10],
+    ["QUARTER", 25],
+    ["DOLLAR", 100],
+    ["FIVE DOLLAR", 500],
+
+]
+
+const REGISTER_STATUS = {
+    closed: "CLOSED",
+    insufficientFunds: "INSUFFICIENT",
+    open: "OPEN"
+}
+
+
+function checkCashRegister(price, cash, cid) {
+    let cashRegister = { status: "", change: cid };
+    let changeNeeded = parseFloat(cash - price).toFixed(2)
+    const changeAvailable = getTotalCashRegisterChange(cid)
+    cashRegister.status = getTotalCashRegisterStatus(changeNeeded, changeAvailable);
+
+    if(cashRegister.status === REGISTER_STATUS.insufficientFunds){
+        cashRegister.change = []
+        return cashRegister
+    }
+
+    cashRegister.change = getCustomersChange(changeNeeded, cid)
+    console.log(changeNeeded)
+
+}
+
+function getCustomersChange(changeNeeded, changeInDrawer) {
+    
+}
+
+function getTotalCashRegisterStatus(changeNeeded, changeAvailable) {
+    if (Number(changeNeeded) > Number(changeAvailable)) {
+        console.log(REGISTER_STATUS.insufficientFunds)
+        return REGISTER_STATUS.insufficientFunds
+    } else if (Number(changeNeeded) < Number(changeAvailable)) {
+        console.log(REGISTER_STATUS.open)
+        return REGISTER_STATUS.open
+    }else{
+        console.log(REGISTER_STATUS.closed)
+        return REGISTER_STATUS.closed
+    }
+}
+
+function getTotalCashRegisterChange(changeInDrawer) {
+    let total = 0;
+    for (let change of changeInDrawer) {
+        let changeValue = change[1]
+        total += changeValue
+    }
+    console.log(total.toFixed(2))
+    return total.toFixed(2)
+}
+
 
 checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
